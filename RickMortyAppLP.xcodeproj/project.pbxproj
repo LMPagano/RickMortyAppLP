@@ -14,6 +14,7 @@
 		13216BCA2A79950D00920634 /* RickMortyAppLPTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13216BC92A79950D00920634 /* RickMortyAppLPTests.swift */; };
 		13216BD42A79950D00920634 /* RickMortyAppLPUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13216BD32A79950D00920634 /* RickMortyAppLPUITests.swift */; };
 		13216BD62A79950D00920634 /* RickMortyAppLPUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13216BD52A79950D00920634 /* RickMortyAppLPUITestsLaunchTests.swift */; };
+		13216BF32A79979000920634 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13216BF22A79979000920634 /* LoginView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,7 @@
 		13216BCF2A79950D00920634 /* RickMortyAppLPUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RickMortyAppLPUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		13216BD32A79950D00920634 /* RickMortyAppLPUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RickMortyAppLPUITests.swift; sourceTree = "<group>"; };
 		13216BD52A79950D00920634 /* RickMortyAppLPUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RickMortyAppLPUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		13216BF22A79979000920634 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,10 +96,11 @@
 		13216BB72A79950C00920634 /* RickMortyAppLP */ = {
 			isa = PBXGroup;
 			children = (
-				13216BB82A79950C00920634 /* RickMortyAppLPApp.swift */,
+				13216BE52A79969B00920634 /* Data */,
+				13216BE42A79969600920634 /* Domain */,
+				13216BE32A79968E00920634 /* Presentation */,
+				13216BE22A79967F00920634 /* App */,
 				13216BBA2A79950C00920634 /* ContentView.swift */,
-				13216BBC2A79950D00920634 /* Assets.xcassets */,
-				13216BBE2A79950D00920634 /* Preview Content */,
 			);
 			path = RickMortyAppLP;
 			sourceTree = "<group>";
@@ -125,6 +128,118 @@
 				13216BD52A79950D00920634 /* RickMortyAppLPUITestsLaunchTests.swift */,
 			);
 			path = RickMortyAppLPUITests;
+			sourceTree = "<group>";
+		};
+		13216BE22A79967F00920634 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				13216BB82A79950C00920634 /* RickMortyAppLPApp.swift */,
+				13216BE72A7996AA00920634 /* Resources */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		13216BE32A79968E00920634 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				13216BED2A7996D400920634 /* Settings */,
+				13216BEC2A7996D000920634 /* Root */,
+				13216BEB2A7996C900920634 /* Resources */,
+				13216BEA2A7996C500920634 /* Home */,
+				13216BE92A7996C000920634 /* Login */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		13216BE42A79969600920634 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				13216BEF2A7996DF00920634 /* Models */,
+				13216BEE2A7996D900920634 /* Protocols */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		13216BE52A79969B00920634 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				13216BF12A7996EC00920634 /* Utils */,
+				13216BF02A7996E900920634 /* Remote */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		13216BE72A7996AA00920634 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				13216BBC2A79950D00920634 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		13216BE92A7996C000920634 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				13216BF22A79979000920634 /* LoginView.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		13216BEA2A7996C500920634 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		13216BEB2A7996C900920634 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				13216BBE2A79950D00920634 /* Preview Content */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		13216BEC2A7996D000920634 /* Root */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Root;
+			sourceTree = "<group>";
+		};
+		13216BED2A7996D400920634 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		13216BEE2A7996D900920634 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		13216BEF2A7996DF00920634 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		13216BF02A7996E900920634 /* Remote */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Remote;
+			sourceTree = "<group>";
+		};
+		13216BF12A7996EC00920634 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -257,6 +372,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				13216BF32A79979000920634 /* LoginView.swift in Sources */,
 				13216BBB2A79950C00920634 /* ContentView.swift in Sources */,
 				13216BB92A79950C00920634 /* RickMortyAppLPApp.swift in Sources */,
 			);
@@ -416,7 +532,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"RickMortyAppLP/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"RickMortyAppLP/Presentation/Resources/Preview Content\"";
 				DEVELOPMENT_TEAM = DNUUCY5TDZ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -445,7 +561,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"RickMortyAppLP/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"RickMortyAppLP/Presentation/Resources/Preview Content\"";
 				DEVELOPMENT_TEAM = DNUUCY5TDZ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
