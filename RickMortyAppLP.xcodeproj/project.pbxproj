@@ -15,6 +15,9 @@
 		13216BD42A79950D00920634 /* RickMortyAppLPUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13216BD32A79950D00920634 /* RickMortyAppLPUITests.swift */; };
 		13216BD62A79950D00920634 /* RickMortyAppLPUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13216BD52A79950D00920634 /* RickMortyAppLPUITestsLaunchTests.swift */; };
 		13216BF32A79979000920634 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13216BF22A79979000920634 /* LoginView.swift */; };
+		13216BF52A79B0F800920634 /* Characters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13216BF42A79B0F700920634 /* Characters.swift */; };
+		13216BF72A79B22000920634 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13216BF62A79B22000920634 /* HomeView.swift */; };
+		13216BF92A79B23100920634 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13216BF82A79B23100920634 /* HomeViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +49,9 @@
 		13216BD32A79950D00920634 /* RickMortyAppLPUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RickMortyAppLPUITests.swift; sourceTree = "<group>"; };
 		13216BD52A79950D00920634 /* RickMortyAppLPUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RickMortyAppLPUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		13216BF22A79979000920634 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		13216BF42A79B0F700920634 /* Characters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Characters.swift; sourceTree = "<group>"; };
+		13216BF62A79B22000920634 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		13216BF82A79B23100920634 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -188,6 +194,8 @@
 		13216BEA2A7996C500920634 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				13216BF62A79B22000920634 /* HomeView.swift */,
+				13216BF82A79B23100920634 /* HomeViewModel.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -224,6 +232,7 @@
 		13216BEF2A7996DF00920634 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				13216BF42A79B0F700920634 /* Characters.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -373,8 +382,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				13216BF32A79979000920634 /* LoginView.swift in Sources */,
+				13216BF92A79B23100920634 /* HomeViewModel.swift in Sources */,
 				13216BBB2A79950C00920634 /* ContentView.swift in Sources */,
 				13216BB92A79950C00920634 /* RickMortyAppLPApp.swift in Sources */,
+				13216BF72A79B22000920634 /* HomeView.swift in Sources */,
+				13216BF52A79B0F800920634 /* Characters.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
