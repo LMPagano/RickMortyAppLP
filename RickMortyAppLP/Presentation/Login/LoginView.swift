@@ -17,14 +17,24 @@ struct LoginView: View {
     var body: some View {
         
         ZStack{
-            Color.gray
-            .ignoresSafeArea()
+            Image("fondoportal")
+                .resizable()
+                .ignoresSafeArea()
+//            Color.gray
+            
             
             // MARK: - User, password login button
             VStack {
-                Image("")
+                Image("logoRM2")
                     .resizable()
-                    .frame(width: 150, height: 150)
+                    .frame(width: 350, height: 120)
+                    .padding()
+//                    .frame(width: 380, height: 200) //tamaño "logoRM"
+                Image("rymlogoinicio")
+                    .resizable()
+                    .frame(width: 200, height: 180)
+                    .shadow(radius: 10, x: 20, y: 10)
+                    
                 
                 // MARK: - User, password
                 VStack {
@@ -64,22 +74,48 @@ struct LoginView: View {
                         .background(Color(uiColor: UIColor(red: 128/255, green: 128/255, blue: 128/255, alpha: 1)))
                         .cornerRadius(8.0)
                         .shadow(radius: 10, x: 20, y: 10)
-                }
+                }.padding(10)
                 
                 Spacer()
                 
-                Button {
-
-                } label: {
-                    Text("No recuerda usuario/contraseña")
-                        .font(.title3)
-                        .fontWeight(.semibold)
-                        .foregroundStyle(.white)
-                        .padding(25)
-                        .frame(width: .infinity, height: 40)
-                        .background(Color.red)
-                        .cornerRadius(5.0)
-                        .shadow(radius: 10, x: 20, y: 10)
+                HStack{
+                  
+                    Image("meeseeks")
+                        .resizable().frame(width: 30, height: 60)
+                    Button {
+                        
+                    } label: {
+                        Text("Crear usuario")
+                        //                        .font(.title2)
+                            .fontWeight(.semibold)
+                            .foregroundStyle(.white)
+                            .padding(5)
+                            .background(Color.green)
+                            .cornerRadius(8.0)
+                        
+                    }.frame(width: 300, height: 40)
+                    
+                    
+                   
+                }
+                HStack{
+                    
+                    Image("memorymorty")
+                        .resizable()
+                        .frame(width: 40, height: 40)
+                       
+                    Button {
+                        
+                    } label: {
+                        Text("No recuerda usuario/contraseña")
+                        //                        .font(.title2)
+                            .fontWeight(.semibold)
+                            .foregroundStyle(.white)
+                            .padding(5)
+                            .background(Color.red)
+                            .cornerRadius(8.0)
+                        
+                    }.frame(width: 300, height: 40)
                 }
             }
             
