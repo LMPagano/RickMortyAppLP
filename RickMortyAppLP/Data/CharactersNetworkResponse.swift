@@ -12,39 +12,38 @@ import Foundation
 enum CharacterViewModelState{
     case initial
     case loading
-    case loaded(dataCharacter: Characters)
+    case loaded(dataCharacter: CharactersNetworkResponse)
     case error(errorMessage: String)
 }
 
-
-struct Characters : Codable{
-    let info: Info
-    let results: [Character]
+struct CharactersNetworkResponse : Codable{
+    let info: CharactersNetworkResponseInfo
+    let results: [CharactersNetworkResponseCharacter]
 }
 
-struct Info : Codable{
+struct CharactersNetworkResponseInfo : Codable{
     let count:Int//": 826,
     let pages:Int//": 42,
-    let next:String//": "https://rickandmortyapi.com/api/character?page=2",
+    let next:String
     let prev:String?//": null
 }
 
-struct Character: Identifiable, Codable {
+struct CharactersNetworkResponseCharacter: Identifiable, Codable {
     let id: Int
     let name: String
     let status: String
     let species: String
     let type: String
     let gender: String
-    let origin, location: Location
+    let origin, location: CharactersNetworkResponseCharacterLocation
     let image: String
     let episode: [String]
     let url: String
     let created: String
 }
 
-struct Location: Codable {
-    let name:String//": "Citadel of Ricks",
-    let url:String//": "https://rickandmortyapi.com/api/location/3"
+struct CharactersNetworkResponseCharacterLocation: Codable {
+    let name:String//": "Citadel of Ricks"
+    let url:String
 }
 

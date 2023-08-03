@@ -8,9 +8,9 @@
 import SwiftUI
 
 struct CharacterRow: View {
-    var character: Character
+    var character: CharactersNetworkResponseCharacter
     
-    init(character: Character) {
+    init(character: CharactersNetworkResponseCharacter) {
         self.character = character
     }
     var body: some View {
@@ -40,6 +40,6 @@ struct CharacterRow: View {
 struct CharacterRow_Previews: PreviewProvider {
     static var previews: some View {
         CharacterRow(
-            character: Character(id: 1, name: "Rick", status: "vivo", species: "Human", type: "Humanos", gender: "masculino", origin: Location(name: "Lara", url: "pepe"), location: Location(name: "Lara", url: "pepe"), image: "asdsad", episode: ["1", "2"], url: "creat", created: "hola"))
+            character: CharactersNetworkResponseCharacter(id: 1, name: "Rick", status: "vivo", species: "Human", type: "Humanos", gender: "masculino", origin: CharactersNetworkResponseCharacterLocation(name: "Lara", url: "pepe"), location: CharactersNetworkResponseCharacterLocation(name: "Lara", url: "pepe"), image: "asdsad", episode: ["1", "2"], url: "creat", created: "hola"))
     }
 }

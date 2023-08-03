@@ -8,35 +8,17 @@
 import Foundation
 import Combine
 
-// Creo la clase
-
 class HomeViewModel: ObservableObject{
     
-    @Published var charactersState: CharacterViewModelState = CharacterViewModelState.initial
+    @Published var charactersState: CharacterViewModelState
+    @Published var arrayCharacters: [Character]
     
-    let remoteDataSourceImp: RepositoryDataSourceProtocol = RepositoryDataSourceProtocol()
-    var cancellable = Set<AnyCancellable>()
+    let charactersProvider: CharactersProvider
     
     init() {
-        getAllCharacters()
-    }
-    
-    func getAllCharacters(){
-        charactersState = CharacterViewModelState.loading
-        
-        remoteDataSourceImp.getAllCharacters()
-            .sink{ [weak self] completion in
-                switch completion{
-                case .finished:
-                    print("Finish")
-                case .failure(let error):
-                    self?.charactersState = CharacterViewModelState.error(errorMessage: "\(error)")
-                }
-            }receiveValue: {
-                [weak self] Characters in
-                self?.charactersState = CharacterViewModelState.loaded(dataCharacter: Characters)
-            }
-            .store(in: &cancellable)
+        self.charactersState = CharacterViewModelState.initial
+        self.charactersProvider = CharactersProvider(charactersState: CharacterViewModelState.initial)
+        self.arrayCharacters = charactersProvider.provide()
     }
 }
 

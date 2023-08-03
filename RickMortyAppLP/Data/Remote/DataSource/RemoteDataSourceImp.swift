@@ -9,12 +9,12 @@ import Foundation
 import Combine
 
 class RepositoryDataSourceProtocol: RepositoryProtocol{
-    private let server: String = "https://rickandmortyapi.com/api/character"
+    private let serverApi: String = "https://rickandmortyapi.com"
     
-    func getAllCharacters() -> AnyPublisher<Characters, Error> {
-            URLSession.shared.dataTaskPublisher(for: URL(string:server)!)
+    func getAllCharacters() -> AnyPublisher<CharactersNetworkResponse, Error> {
+            URLSession.shared.dataTaskPublisher(for: URL(string:serverApi + "/api/character")!) // le concateno el Path al server
             .map({$0.data})
-            .decode(type: Characters.self, decoder: JSONDecoder())
+            .decode(type: CharactersNetworkResponse.self, decoder: JSONDecoder())
             .receive(on: DispatchQueue.main)
             .eraseToAnyPublisher()
     }

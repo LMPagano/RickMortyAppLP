@@ -15,12 +15,14 @@
 		13216BD42A79950D00920634 /* RickMortyAppLPUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13216BD32A79950D00920634 /* RickMortyAppLPUITests.swift */; };
 		13216BD62A79950D00920634 /* RickMortyAppLPUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13216BD52A79950D00920634 /* RickMortyAppLPUITestsLaunchTests.swift */; };
 		13216BF32A79979000920634 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13216BF22A79979000920634 /* LoginView.swift */; };
-		13216BF52A79B0F800920634 /* Characters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13216BF42A79B0F700920634 /* Characters.swift */; };
+		13216BF52A79B0F800920634 /* CharactersNetworkResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13216BF42A79B0F700920634 /* CharactersNetworkResponse.swift */; };
 		13216BF72A79B22000920634 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13216BF62A79B22000920634 /* HomeView.swift */; };
 		13216BF92A79B23100920634 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13216BF82A79B23100920634 /* HomeViewModel.swift */; };
 		13216C3B2A7AB1C800920634 /* RepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13216C3A2A7AB1C800920634 /* RepositoryProtocol.swift */; };
 		13216C3F2A7AB68E00920634 /* RemoteDataSourceImp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13216C3E2A7AB68E00920634 /* RemoteDataSourceImp.swift */; };
 		13216C632A7C087B00920634 /* CharacterRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13216C622A7C087B00920634 /* CharacterRow.swift */; };
+		13216C672A7C0D6000920634 /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13216C662A7C0D6000920634 /* Character.swift */; };
+		13216C692A7C119100920634 /* CharactersProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13216C682A7C119100920634 /* CharactersProvider.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,12 +54,14 @@
 		13216BD32A79950D00920634 /* RickMortyAppLPUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RickMortyAppLPUITests.swift; sourceTree = "<group>"; };
 		13216BD52A79950D00920634 /* RickMortyAppLPUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RickMortyAppLPUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		13216BF22A79979000920634 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
-		13216BF42A79B0F700920634 /* Characters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Characters.swift; sourceTree = "<group>"; };
+		13216BF42A79B0F700920634 /* CharactersNetworkResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersNetworkResponse.swift; sourceTree = "<group>"; };
 		13216BF62A79B22000920634 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		13216BF82A79B23100920634 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		13216C3A2A7AB1C800920634 /* RepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryProtocol.swift; sourceTree = "<group>"; };
 		13216C3E2A7AB68E00920634 /* RemoteDataSourceImp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteDataSourceImp.swift; sourceTree = "<group>"; };
 		13216C622A7C087B00920634 /* CharacterRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterRow.swift; sourceTree = "<group>"; };
+		13216C662A7C0D6000920634 /* Character.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
+		13216C682A7C119100920634 /* CharactersProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersProvider.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -178,6 +182,8 @@
 			children = (
 				13216BF12A7996EC00920634 /* Utils */,
 				13216BF02A7996E900920634 /* Remote */,
+				13216BF42A79B0F700920634 /* CharactersNetworkResponse.swift */,
+				13216C682A7C119100920634 /* CharactersProvider.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -240,7 +246,7 @@
 		13216BEF2A7996DF00920634 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				13216BF42A79B0F700920634 /* Characters.swift */,
+				13216C662A7C0D6000920634 /* Character.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -248,7 +254,7 @@
 		13216BF02A7996E900920634 /* Remote */ = {
 			isa = PBXGroup;
 			children = (
-				13216C3E2A7AB68E00920634 /* RemoteDataSourceImp.swift */,
+				13216C652A7C0D1100920634 /* DataSource */,
 			);
 			path = Remote;
 			sourceTree = "<group>";
@@ -274,6 +280,14 @@
 				13216C602A7C084B00920634 /* CharacterRow */,
 			);
 			path = Components;
+			sourceTree = "<group>";
+		};
+		13216C652A7C0D1100920634 /* DataSource */ = {
+			isa = PBXGroup;
+			children = (
+				13216C3E2A7AB68E00920634 /* RemoteDataSourceImp.swift */,
+			);
+			path = DataSource;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -406,6 +420,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				13216C692A7C119100920634 /* CharactersProvider.swift in Sources */,
 				13216BF32A79979000920634 /* LoginView.swift in Sources */,
 				13216C632A7C087B00920634 /* CharacterRow.swift in Sources */,
 				13216BF92A79B23100920634 /* HomeViewModel.swift in Sources */,
@@ -413,8 +428,9 @@
 				13216BBB2A79950C00920634 /* ContentView.swift in Sources */,
 				13216BB92A79950C00920634 /* RickMortyAppLPApp.swift in Sources */,
 				13216BF72A79B22000920634 /* HomeView.swift in Sources */,
-				13216BF52A79B0F800920634 /* Characters.swift in Sources */,
+				13216BF52A79B0F800920634 /* CharactersNetworkResponse.swift in Sources */,
 				13216C3B2A7AB1C800920634 /* RepositoryProtocol.swift in Sources */,
+				13216C672A7C0D6000920634 /* Character.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
