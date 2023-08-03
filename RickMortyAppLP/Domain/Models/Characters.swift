@@ -7,9 +7,19 @@
 
 import Foundation
 
+ // TODO: - Cleanear esto
+
+enum CharacterViewModelState{
+    case initial
+    case loading
+    case loaded(dataCharacter: Characters)
+    case error(errorMessage: String)
+}
+
+
 struct Characters : Codable{
     let info: Info
-    let results: [Results]
+    let results: [Character]
 }
 
 struct Info : Codable{
@@ -19,7 +29,7 @@ struct Info : Codable{
     let prev:String?//": null
 }
 
-struct Results: Identifiable,Codable {
+struct Character: Identifiable, Codable {
     let id: Int
     let name: String
     let status: String
@@ -33,7 +43,7 @@ struct Results: Identifiable,Codable {
     let created: String
 }
 
-struct Location:Codable {
+struct Location: Codable {
     let name:String//": "Citadel of Ricks",
     let url:String//": "https://rickandmortyapi.com/api/location/3"
 }

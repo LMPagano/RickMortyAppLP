@@ -8,8 +8,30 @@
 import SwiftUI
 
 struct HomeView: View {
+    
+    
+    @StateObject private var viewModel: HomeViewModel = HomeViewModel()
+    
     var body: some View {
-        Text("Home View")
+        
+        NavigationView{
+            VStack{
+                switch viewModel.charactersState{
+                case .initial:
+                    ProgressView()
+                case .loading:
+                    ProgressView()
+                case .error(let error):
+                    Text(error)
+                case .loaded(let data):
+                    ScrollView{
+                        ForEach(data.results){ result in
+                            CharacterRow(character: result)
+                        }
+                    }
+                }
+            }.navigationTitle("Personajes")
+        }
     }
 }
 
