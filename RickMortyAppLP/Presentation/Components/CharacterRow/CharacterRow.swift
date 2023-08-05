@@ -8,22 +8,24 @@
 import SwiftUI
 
 struct CharacterRow: View {
-    var character: CharactersNetworkResponseCharacter
+    var character: Character
     
-    init(character: CharactersNetworkResponseCharacter) {
+    init(character: Character) {
         self.character = character
     }
+    
     var body: some View {
         HStack{
             AsyncImage(url: URL(string: character.image)){ image in
                 image.resizable()
-                     .cornerRadius(25)
+                    .frame(width: 80, height: 80)
+                     .cornerRadius(5)
             }placeholder: {
                 ProgressView()
-            }.frame(width: 50, height: 50)
+            }.frame(width: 80, height: 80)
             VStack(alignment: .leading){
                 Text(character.name)
-                    .font(.headline)
+                    .font(.title)
                     .fontWeight(.medium)
                 Text(character.gender)
                     .font(.subheadline)
@@ -40,6 +42,6 @@ struct CharacterRow: View {
 struct CharacterRow_Previews: PreviewProvider {
     static var previews: some View {
         CharacterRow(
-            character: CharactersNetworkResponseCharacter(id: 1, name: "Rick", status: "vivo", species: "Human", type: "Humanos", gender: "masculino", origin: CharactersNetworkResponseCharacterLocation(name: "Lara", url: "pepe"), location: CharactersNetworkResponseCharacterLocation(name: "Lara", url: "pepe"), image: "asdsad", episode: ["1", "2"], url: "creat", created: "hola"))
+            character: Character(id: 1, name: "Personaje", species: "Especie", gender: "Genero", image:"https://rickandmortyapi.com/api/character/avatar/94.jpeg"))
     }
 }

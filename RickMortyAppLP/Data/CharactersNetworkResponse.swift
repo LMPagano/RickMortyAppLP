@@ -12,8 +12,8 @@ import Foundation
 enum CharacterViewModelState{
     case initial
     case loading
-    case loaded(dataCharacter: CharactersNetworkResponse)
-    case error(errorMessage: String)
+    case loaded
+    case error
 }
 
 struct CharactersNetworkResponse : Codable{
@@ -22,8 +22,8 @@ struct CharactersNetworkResponse : Codable{
 }
 
 struct CharactersNetworkResponseInfo : Codable{
-    let count:Int//": 826,
-    let pages:Int//": 42,
+    let count:Int//": 826
+    let pages:Int//": 42
     let next:String
     let prev:String?//": null
 }

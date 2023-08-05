@@ -8,29 +8,27 @@
 import SwiftUI
 
 struct HomeView: View {
-    
-    
-    @StateObject private var viewModel: HomeViewModel = HomeViewModel()
-    
+    @StateObject private var homeViewModel: HomeViewModel = HomeViewModel()
+
     var body: some View {
-        
         NavigationView{
             VStack{
-                switch viewModel.charactersState{
+                switch homeViewModel.charactersState{
                 case .initial:
                     ProgressView()
                 case .loading:
                     ProgressView()
-                case .error(let error):
-                    Text(error)
-                case .loaded(let data):
+                case .error:
+                    Text("Error")
+                case .loaded:
                     ScrollView{
-                        ForEach(data.results){ result in
+                        ForEach(homeViewModel.arrayCharacters){ result in
                             CharacterRow(character: result)
                         }
                     }
                 }
-            }.navigationTitle("Personajes")
+            }.navigationTitle("Wiki Rick y Morty")
+            .onAppear(){homeViewModel.onLoad()}
         }
     }
 }

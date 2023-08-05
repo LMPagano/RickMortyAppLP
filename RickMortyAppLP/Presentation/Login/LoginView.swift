@@ -11,8 +11,7 @@ struct LoginView: View {
     
     @State private var user = ""
     @State private var password = ""
-    
-    
+
     
     var body: some View {
         

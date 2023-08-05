@@ -19,7 +19,7 @@
 		13216BF72A79B22000920634 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13216BF62A79B22000920634 /* HomeView.swift */; };
 		13216BF92A79B23100920634 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13216BF82A79B23100920634 /* HomeViewModel.swift */; };
 		13216C3B2A7AB1C800920634 /* RepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13216C3A2A7AB1C800920634 /* RepositoryProtocol.swift */; };
-		13216C3F2A7AB68E00920634 /* RemoteDataSourceImp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13216C3E2A7AB68E00920634 /* RemoteDataSourceImp.swift */; };
+		13216C3F2A7AB68E00920634 /* RepositoryDataSourceImp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13216C3E2A7AB68E00920634 /* RepositoryDataSourceImp.swift */; };
 		13216C632A7C087B00920634 /* CharacterRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13216C622A7C087B00920634 /* CharacterRow.swift */; };
 		13216C672A7C0D6000920634 /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13216C662A7C0D6000920634 /* Character.swift */; };
 		13216C692A7C119100920634 /* CharactersProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13216C682A7C119100920634 /* CharactersProvider.swift */; };
@@ -58,7 +58,7 @@
 		13216BF62A79B22000920634 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		13216BF82A79B23100920634 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		13216C3A2A7AB1C800920634 /* RepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryProtocol.swift; sourceTree = "<group>"; };
-		13216C3E2A7AB68E00920634 /* RemoteDataSourceImp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteDataSourceImp.swift; sourceTree = "<group>"; };
+		13216C3E2A7AB68E00920634 /* RepositoryDataSourceImp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryDataSourceImp.swift; sourceTree = "<group>"; };
 		13216C622A7C087B00920634 /* CharacterRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterRow.swift; sourceTree = "<group>"; };
 		13216C662A7C0D6000920634 /* Character.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
 		13216C682A7C119100920634 /* CharactersProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersProvider.swift; sourceTree = "<group>"; };
@@ -285,7 +285,7 @@
 		13216C652A7C0D1100920634 /* DataSource */ = {
 			isa = PBXGroup;
 			children = (
-				13216C3E2A7AB68E00920634 /* RemoteDataSourceImp.swift */,
+				13216C3E2A7AB68E00920634 /* RepositoryDataSourceImp.swift */,
 			);
 			path = DataSource;
 			sourceTree = "<group>";
@@ -424,7 +424,7 @@
 				13216BF32A79979000920634 /* LoginView.swift in Sources */,
 				13216C632A7C087B00920634 /* CharacterRow.swift in Sources */,
 				13216BF92A79B23100920634 /* HomeViewModel.swift in Sources */,
-				13216C3F2A7AB68E00920634 /* RemoteDataSourceImp.swift in Sources */,
+				13216C3F2A7AB68E00920634 /* RepositoryDataSourceImp.swift in Sources */,
 				13216BBB2A79950C00920634 /* ContentView.swift in Sources */,
 				13216BB92A79950C00920634 /* RickMortyAppLPApp.swift in Sources */,
 				13216BF72A79B22000920634 /* HomeView.swift in Sources */,

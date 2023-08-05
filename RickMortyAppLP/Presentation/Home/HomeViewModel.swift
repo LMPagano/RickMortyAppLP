@@ -6,8 +6,10 @@
 //
 
 import Foundation
-import Combine
+//import Combine
 
+
+@MainActor
 class HomeViewModel: ObservableObject{
     
     @Published var charactersState: CharacterViewModelState
@@ -18,7 +20,13 @@ class HomeViewModel: ObservableObject{
     init() {
         self.charactersState = CharacterViewModelState.initial
         self.charactersProvider = CharactersProvider(charactersState: CharacterViewModelState.initial)
-        self.arrayCharacters = charactersProvider.provide()
+        self.arrayCharacters = []
+    }
+    
+    func onLoad(){
+        Task.init{arrayCharacters = await charactersProvider.provide()
+            charactersState = CharacterViewModelState.loaded
+                    }
     }
 }
 
