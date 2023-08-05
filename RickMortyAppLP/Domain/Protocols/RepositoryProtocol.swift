@@ -19,5 +19,5 @@ protocol RepositoryProtocol{
     // 5/8 agregue el condicional a CharactersNetworkResponse
     
                             //AnyPublisher<CharactersNetworkResponse, Error>
-    func getAllCharacters() async throws -> CharactersNetworkResponse?
+    func getAllCharacters() async throws -> [CharactersNetworkResponseCharacter]
 }

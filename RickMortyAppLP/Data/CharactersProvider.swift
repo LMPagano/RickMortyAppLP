@@ -7,14 +7,52 @@
 
 import Foundation
 
+ // Segundo Back up 5/8
+ 
+ class CharactersProvider{
+     let remoteDataSourceImp: RemoteDataSourceImp // = RepositoryDataSourceProtocol()
+     var charactersState: CharacterViewModelState
+     
+     init(charactersState: CharacterViewModelState) {
+         self.charactersState = charactersState
+         self.remoteDataSourceImp = RemoteDataSourceImp()
+     }
+     
+     func provide() async -> [Character]{
+         let characterNetworkResponse: [CharactersNetworkResponseCharacter] = try! await remoteDataSourceImp.getAllCharacters()
+             return mapeo(characterNetworkResponse: characterNetworkResponse)
+
+     }
+                                             
+     func mapeo(characterNetworkResponse: [CharactersNetworkResponseCharacter]) -> [Character]{
+
+         print("Paseo el mapeo")
+         return characterNetworkResponse.map{networkCharacter in
+             Character(id: networkCharacter.id,
+                       name: networkCharacter.name,
+                       species: networkCharacter.species,
+                       gender: networkCharacter.gender,
+                       image: networkCharacter.image)
+         }
+         
+     }
+
+ }
+
+
+
+
+
+
+/*
 
 class CharactersProvider{
-    let remoteDataSourceImp: RepositoryDataSourceProtocol // = RepositoryDataSourceProtocol()
+    let remoteDataSourceImp: RemoteDataSourceImp // = RepositoryDataSourceProtocol()
     var charactersState: CharacterViewModelState
     
     init(charactersState: CharacterViewModelState) {
         self.charactersState = charactersState
-        self.remoteDataSourceImp = RepositoryDataSourceProtocol()
+        self.remoteDataSourceImp = RemoteDataSourceImp()
     }
     
     func provide() async -> [Character]{
@@ -45,6 +83,13 @@ class CharactersProvider{
     }
 
 }
+
+*/
+
+///*
+///
+///
+
 
 
 /*

@@ -4,11 +4,8 @@
 //
 //  Created by Pagano Leandro Manuel on 3/8/23.
 //
-
 import Foundation
 
-
-                    
 struct Character: Identifiable, Codable{
     let id: Int
     let name: String

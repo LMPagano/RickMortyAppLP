@@ -13,7 +13,10 @@ import Foundation
 class HomeViewModel: ObservableObject{
     
     @Published var charactersState: CharacterViewModelState
-    @Published var arrayCharacters: [Character]
+    var arrayCharacters: [Character]
+    @Published var searchText = ""
+    @Published var filteredCharacters: [Character]
+
     
     let charactersProvider: CharactersProvider
     
@@ -21,13 +24,35 @@ class HomeViewModel: ObservableObject{
         self.charactersState = CharacterViewModelState.initial
         self.charactersProvider = CharactersProvider(charactersState: CharacterViewModelState.initial)
         self.arrayCharacters = []
+        self.filteredCharacters = []
     }
     
     func onLoad(){
         Task.init{arrayCharacters = await charactersProvider.provide()
+            filteredCharacters = arrayCharacters
             charactersState = CharacterViewModelState.loaded
                     }
     }
+    
+    
+    func searchCharacter(textoABuscar: String){
+        if textoABuscar == ""{
+            filteredCharacters = arrayCharacters
+        }else{
+            filteredCharacters = arrayCharacters.filter{character in
+                character.name.contains(textoABuscar)
+            }
+        
+        }
+      
+        
+            
+    }
+    
+    
+    
+    
+    
 }
 
 

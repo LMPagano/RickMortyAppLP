@@ -7,11 +7,15 @@
 
 import SwiftUI
 
+
 struct HomeView: View {
     @StateObject private var homeViewModel: HomeViewModel = HomeViewModel()
-
+    @State var busqueda = ""
+    
     var body: some View {
+    
         NavigationView{
+            
             VStack{
                 switch homeViewModel.charactersState{
                 case .initial:
@@ -22,19 +26,22 @@ struct HomeView: View {
                     Text("Error")
                 case .loaded:
                     ScrollView{
-                        ForEach(homeViewModel.arrayCharacters){ result in
+                        ForEach(homeViewModel.filteredCharacters){ result in
                             CharacterRow(character: result)
                         }
                     }
                 }
             }.navigationTitle("Wiki Rick y Morty")
             .onAppear(){homeViewModel.onLoad()}
+            
+        }.searchable(text: $busqueda).onChange(of: busqueda) { busqueda in  homeViewModel.searchCharacter(textoABuscar: busqueda)
         }
     }
 }
 
 struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
-        HomeView()
+        HomeView(busqueda: "Busca personaje")
+
     }
 }
