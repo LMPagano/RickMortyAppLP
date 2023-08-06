@@ -11,7 +11,9 @@ import SwiftUI
 struct RickMortyAppLPApp: App {
     var body: some Scene {
         WindowGroup {
-            HomeView(busqueda: "")
+            
+            HomeView()
+            //HomeView(busqueda: "")
         }
     }
 }

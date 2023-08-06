@@ -14,11 +14,10 @@ import SwiftUI
  //AnyPublisher<CharactersNetworkResponse, Error>
      
  func getAllCharacters() async throws -> [CharactersNetworkResponseCharacter]{
-
  //URLSession.shared.dataTaskPublisher(for: URL(string:serverApi + "/api/character")!)
      
      var characterNetwork: [CharactersNetworkResponseCharacter] = []
-     for num in 1...41{
+     for num in 1...2{ //1...41
          characterNetwork.append(contentsOf: try await getAllCharacterByPages(num: num).results)
      }
      return characterNetwork
@@ -38,6 +37,12 @@ import SwiftUI
  }
  
  
+
+
+
+
+
+
 //*/
 
 

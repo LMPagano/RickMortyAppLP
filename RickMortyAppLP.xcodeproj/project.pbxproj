@@ -23,6 +23,12 @@
 		13216C632A7C087B00920634 /* CharacterRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13216C622A7C087B00920634 /* CharacterRow.swift */; };
 		13216C672A7C0D6000920634 /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13216C662A7C0D6000920634 /* Character.swift */; };
 		13216C692A7C119100920634 /* CharactersProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13216C682A7C119100920634 /* CharactersProvider.swift */; };
+		1379A7FD2A7FC7A600E1AF97 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1379A7FC2A7FC7A600E1AF97 /* LoginViewModel.swift */; };
+		1379A7FF2A7FF55C00E1AF97 /* RootViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1379A7FE2A7FF55C00E1AF97 /* RootViewModel.swift */; };
+		1379A8012A7FF57600E1AF97 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1379A8002A7FF57600E1AF97 /* RootView.swift */; };
+		1379A8042A8003F000E1AF97 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1379A8032A8003F000E1AF97 /* DetailView.swift */; };
+		1379A8062A800FD700E1AF97 /* Recoveryview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1379A8052A800FD700E1AF97 /* Recoveryview.swift */; };
+		13AD65C92A801F6A0058ECA4 /* RemoteDataSourceImpTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13AD65C82A801F6A0058ECA4 /* RemoteDataSourceImpTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +68,12 @@
 		13216C622A7C087B00920634 /* CharacterRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterRow.swift; sourceTree = "<group>"; };
 		13216C662A7C0D6000920634 /* Character.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
 		13216C682A7C119100920634 /* CharactersProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersProvider.swift; sourceTree = "<group>"; };
+		1379A7FC2A7FC7A600E1AF97 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		1379A7FE2A7FF55C00E1AF97 /* RootViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewModel.swift; sourceTree = "<group>"; };
+		1379A8002A7FF57600E1AF97 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
+		1379A8032A8003F000E1AF97 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
+		1379A8052A800FD700E1AF97 /* Recoveryview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recoveryview.swift; sourceTree = "<group>"; };
+		13AD65C82A801F6A0058ECA4 /* RemoteDataSourceImpTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteDataSourceImpTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,6 +145,7 @@
 			isa = PBXGroup;
 			children = (
 				13216BC92A79950D00920634 /* RickMortyAppLPTests.swift */,
+				13AD65C82A801F6A0058ECA4 /* RemoteDataSourceImpTests.swift */,
 			);
 			path = RickMortyAppLPTests;
 			sourceTree = "<group>";
@@ -200,6 +213,7 @@
 			isa = PBXGroup;
 			children = (
 				13216BF22A79979000920634 /* LoginView.swift */,
+				1379A7FC2A7FC7A600E1AF97 /* LoginViewModel.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -224,6 +238,8 @@
 		13216BEC2A7996D000920634 /* Root */ = {
 			isa = PBXGroup;
 			children = (
+				1379A7FE2A7FF55C00E1AF97 /* RootViewModel.swift */,
+				1379A8002A7FF57600E1AF97 /* RootView.swift */,
 			);
 			path = Root;
 			sourceTree = "<group>";
@@ -266,18 +282,10 @@
 			path = Utils;
 			sourceTree = "<group>";
 		};
-		13216C602A7C084B00920634 /* CharacterRow */ = {
-			isa = PBXGroup;
-			children = (
-				13216C622A7C087B00920634 /* CharacterRow.swift */,
-			);
-			path = CharacterRow;
-			sourceTree = "<group>";
-		};
 		13216C612A7C085A00920634 /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				13216C602A7C084B00920634 /* CharacterRow */,
+				1379A8022A8003C500E1AF97 /* Views */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -288,6 +296,16 @@
 				13216C3E2A7AB68E00920634 /* RemoteDataSourceImp.swift */,
 			);
 			path = DataSource;
+			sourceTree = "<group>";
+		};
+		1379A8022A8003C500E1AF97 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				13216C622A7C087B00920634 /* CharacterRow.swift */,
+				1379A8032A8003F000E1AF97 /* DetailView.swift */,
+				1379A8052A800FD700E1AF97 /* Recoveryview.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -424,12 +442,17 @@
 				13216BF32A79979000920634 /* LoginView.swift in Sources */,
 				13216C632A7C087B00920634 /* CharacterRow.swift in Sources */,
 				13216BF92A79B23100920634 /* HomeViewModel.swift in Sources */,
+				1379A8012A7FF57600E1AF97 /* RootView.swift in Sources */,
 				13216C3F2A7AB68E00920634 /* RemoteDataSourceImp.swift in Sources */,
 				13216BBB2A79950C00920634 /* ContentView.swift in Sources */,
+				1379A8062A800FD700E1AF97 /* Recoveryview.swift in Sources */,
 				13216BB92A79950C00920634 /* RickMortyAppLPApp.swift in Sources */,
 				13216BF72A79B22000920634 /* HomeView.swift in Sources */,
+				1379A7FD2A7FC7A600E1AF97 /* LoginViewModel.swift in Sources */,
+				1379A7FF2A7FF55C00E1AF97 /* RootViewModel.swift in Sources */,
 				13216BF52A79B0F800920634 /* CharactersNetworkResponse.swift in Sources */,
 				13216C3B2A7AB1C800920634 /* RepositoryProtocol.swift in Sources */,
+				1379A8042A8003F000E1AF97 /* DetailView.swift in Sources */,
 				13216C672A7C0D6000920634 /* Character.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -439,6 +462,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				13216BCA2A79950D00920634 /* RickMortyAppLPTests.swift in Sources */,
+				13AD65C92A801F6A0058ECA4 /* RemoteDataSourceImpTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

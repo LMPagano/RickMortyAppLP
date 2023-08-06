@@ -6,7 +6,7 @@
 //
 
 import Foundation
-//import Combine
+import SwiftUI
 
 
 @MainActor
@@ -16,7 +16,9 @@ class HomeViewModel: ObservableObject{
     var arrayCharacters: [Character]
     @Published var searchText = ""
     @Published var filteredCharacters: [Character]
-
+    
+    @Published var log = false
+    
     
     let charactersProvider: CharactersProvider
     
@@ -34,7 +36,6 @@ class HomeViewModel: ObservableObject{
                     }
     }
     
-    
     func searchCharacter(textoABuscar: String){
         if textoABuscar == ""{
             filteredCharacters = arrayCharacters
@@ -42,15 +43,17 @@ class HomeViewModel: ObservableObject{
             filteredCharacters = arrayCharacters.filter{character in
                 character.name.contains(textoABuscar)
             }
-        
         }
-      
         
-            
     }
     
     
-    
+    func logOut(){
+        
+        
+        
+        
+    }
     
     
 }

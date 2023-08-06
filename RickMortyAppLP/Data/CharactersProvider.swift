@@ -6,10 +6,9 @@
 //
 
 import Foundation
-
- // Segundo Back up 5/8
  
  class CharactersProvider{
+     
      let remoteDataSourceImp: RemoteDataSourceImp // = RepositoryDataSourceProtocol()
      var charactersState: CharacterViewModelState
      
@@ -26,7 +25,7 @@ import Foundation
                                              
      func mapeo(characterNetworkResponse: [CharactersNetworkResponseCharacter]) -> [Character]{
 
-         print("Paseo el mapeo")
+         print("Mapeo remote to local")
          return characterNetworkResponse.map{networkCharacter in
              Character(id: networkCharacter.id,
                        name: networkCharacter.name,
