@@ -45,3 +45,4 @@ struct DetailView_Previews: PreviewProvider {
         DetailView(character: Character(id: 1, name: "Personaje", species: "Especie", gender: "Genero", image:"https://rickandmortyapi.com/api/character/avatar/94.jpeg"))
     }
 }
+

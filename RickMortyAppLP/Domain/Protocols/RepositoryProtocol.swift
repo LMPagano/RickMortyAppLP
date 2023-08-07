@@ -14,7 +14,7 @@ protocol RepositoryProtocol{
     //Creo Protocolo con la funcion que trae info del repo y lo asigno por combine con el output:el objeto Characters y la Failure:  Error
     
     func loginApp ()
-    
+
     
     // 5/8 agregue el condicional a CharactersNetworkResponse
     

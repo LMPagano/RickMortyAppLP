@@ -12,7 +12,8 @@ struct RickMortyAppLPApp: App {
     var body: some Scene {
         WindowGroup {
             
-            HomeView()
+//            RootView()
+            LoginView()
             //HomeView(busqueda: "")
         }
     }

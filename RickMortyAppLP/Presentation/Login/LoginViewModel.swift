@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-extension LoginView {
+//extension LoginView {
     
     class LoginViewModel: ObservableObject {
 //        @AppStorage("AUTH_KEY") var authenticated = false {
@@ -33,31 +33,44 @@ extension LoginView {
             // Make sure that the password does not save.
             self.password = ""
             
-            withAnimation(.spring()) {
-                authenticated.toggle()
-            }
+            authenticated.toggle()
+//            withAnimation(.spring()) {
+//                authenticated.toggle()
+//            }
         }
 
-        func authenticate() {
-            // Check for user
-            guard self.username.lowercased() == sampleUser else {
-                self.invalid = true
-                return }
-            
-            // Check for password
-            guard self.password.lowercased() == samplePassword else {
-                self.invalid = true
-                return }
-            
+//        func authenticate(user: String, pass: String) {
+//            // Check for user
+//            guard user.lowercased() == sampleUser else {
+//                self.invalid = true
+//                return }
+//
+//            // Check for password
+//            guard pass.lowercased() == samplePassword else {
+//                self.invalid = true
+//                return }
+          
+            func authenticate() {
+                // Check for user
+                guard self.username.lowercased() == sampleUser else {
+                    self.invalid = true
+                    return }
+                
+                // Check for password
+                guard self.password.lowercased() == samplePassword else {
+                    self.invalid = true
+                    return }
+         
             toggleAuthentication()
         }
         
-        func logOut() {
-            toggleAuthentication()
+        func logOut()  {
+            print("Se esta por togglear \(authenticated)")
+           return LoginView()
         }
 
         func logPressed() {
             print("Boton presionado")
         }
     }
-}
+//}

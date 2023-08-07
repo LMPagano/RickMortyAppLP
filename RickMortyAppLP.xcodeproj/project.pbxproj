@@ -27,7 +27,7 @@
 		1379A7FF2A7FF55C00E1AF97 /* RootViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1379A7FE2A7FF55C00E1AF97 /* RootViewModel.swift */; };
 		1379A8012A7FF57600E1AF97 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1379A8002A7FF57600E1AF97 /* RootView.swift */; };
 		1379A8042A8003F000E1AF97 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1379A8032A8003F000E1AF97 /* DetailView.swift */; };
-		1379A8062A800FD700E1AF97 /* Recoveryview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1379A8052A800FD700E1AF97 /* Recoveryview.swift */; };
+		1379A8062A800FD700E1AF97 /* ConfigView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1379A8052A800FD700E1AF97 /* ConfigView.swift */; };
 		13AD65C92A801F6A0058ECA4 /* RemoteDataSourceImpTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13AD65C82A801F6A0058ECA4 /* RemoteDataSourceImpTests.swift */; };
 /* End PBXBuildFile section */
 
@@ -72,7 +72,7 @@
 		1379A7FE2A7FF55C00E1AF97 /* RootViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewModel.swift; sourceTree = "<group>"; };
 		1379A8002A7FF57600E1AF97 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
 		1379A8032A8003F000E1AF97 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
-		1379A8052A800FD700E1AF97 /* Recoveryview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recoveryview.swift; sourceTree = "<group>"; };
+		1379A8052A800FD700E1AF97 /* ConfigView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigView.swift; sourceTree = "<group>"; };
 		13AD65C82A801F6A0058ECA4 /* RemoteDataSourceImpTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteDataSourceImpTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -238,8 +238,8 @@
 		13216BEC2A7996D000920634 /* Root */ = {
 			isa = PBXGroup;
 			children = (
-				1379A7FE2A7FF55C00E1AF97 /* RootViewModel.swift */,
 				1379A8002A7FF57600E1AF97 /* RootView.swift */,
+				1379A7FE2A7FF55C00E1AF97 /* RootViewModel.swift */,
 			);
 			path = Root;
 			sourceTree = "<group>";
@@ -303,7 +303,7 @@
 			children = (
 				13216C622A7C087B00920634 /* CharacterRow.swift */,
 				1379A8032A8003F000E1AF97 /* DetailView.swift */,
-				1379A8052A800FD700E1AF97 /* Recoveryview.swift */,
+				1379A8052A800FD700E1AF97 /* ConfigView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -445,7 +445,7 @@
 				1379A8012A7FF57600E1AF97 /* RootView.swift in Sources */,
 				13216C3F2A7AB68E00920634 /* RemoteDataSourceImp.swift in Sources */,
 				13216BBB2A79950C00920634 /* ContentView.swift in Sources */,
-				1379A8062A800FD700E1AF97 /* Recoveryview.swift in Sources */,
+				1379A8062A800FD700E1AF97 /* ConfigView.swift in Sources */,
 				13216BB92A79950C00920634 /* RickMortyAppLPApp.swift in Sources */,
 				13216BF72A79B22000920634 /* HomeView.swift in Sources */,
 				1379A7FD2A7FC7A600E1AF97 /* LoginViewModel.swift in Sources */,

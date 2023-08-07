@@ -15,7 +15,6 @@ struct Character: Identifiable, Codable{
 }
 
 
-
 //let id: Int
 //let name: String
 ////    let status: String

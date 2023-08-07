@@ -6,11 +6,17 @@
 //
 
 import SwiftUI
+//import Combine
 
 struct LoginView: View {
     
+    //  7/8
+//    @EnvironmentObject var vmm: RootViewModel
+    
+    
     //  6/8
     @StateObject var vm = LoginViewModel()
+//    @EnvironmentObject var rootViewModel: RootViewModel
     
     
     var body: some View {
@@ -71,54 +77,74 @@ struct LoginView: View {
                     
                     // MARK: - Login button
                     
-                    Button("Ingresar",role: .cancel, action: vm.authenticate)
-                        .buttonStyle(.bordered)
-                        .font(.title3)
-                        .fontWeight(.semibold)
-                        .foregroundStyle(.white)
-                    //                                .frame(width: 138, height: 40)
-                        .background(Color(uiColor: UIColor(red: 128/255, green: 128/255, blue: 128/255, alpha: 1)))
-                        .cornerRadius(9)
-                        .shadow(radius: 10, x: 20, y: 10)
+                    // 7-8
                     
-                    Spacer()
-                   
-                    HStack{
+//                    Button {
+//                        rootViewModel.authenticate(user: $vm.username, password: $vm.password)
+//                    } label: {
+//                        Text("Ingresar")
+//                            .buttonStyle(.bordered)
+//                            .font(.title3)
+//                            .fontWeight(.semibold)
+//                            .foregroundStyle(.white)
+//                            .background(Color(uiColor: UIColor(red: 128/255, green: 128/255, blue: 128/255, alpha: 1)))
+//                            .cornerRadius(9)
+//                            .shadow(radius: 10, x: 20, y: 10)
                         
-                        Image("memorymorty")
-                            .resizable()
-                            .frame(width: 40, height: 40)
                         
-                        Button {
-
-
-                        } label: {
-                            Text("No recuerda usuario/contraseña")
-                            //                        .font(.title2)
-                                .fontWeight(.semibold)
-                                .foregroundStyle(.white)
-                                .padding(5)
-                                .background(Color.red)
-                                .cornerRadius(8.0)
-
-                        }.frame(width: 300, height: 40)
+                        
+                       
+                         Button("Ingresar",role: .cancel, action: vm.authenticate)
+                         .buttonStyle(.bordered)
+                         .font(.title3)
+                         .fontWeight(.semibold)
+                         .foregroundStyle(.white)
+                         //                                .frame(width: 138, height: 40)
+                         .background(Color(uiColor: UIColor(red: 128/255, green: 128/255, blue: 128/255, alpha: 1)))
+                         .cornerRadius(9)
+                         .shadow(radius: 10, x: 20, y: 10)
+                         
+                        
+                        
+                        Spacer()
+                        
+                        HStack{
+                            
+                            Image("memorymorty")
+                                .resizable()
+                                .frame(width: 40, height: 40)
+                            
+                            Button {
+                                
+                                
+                            } label: {
+                                Text("No recuerda usuario/contraseña")
+                                //                        .font(.title2)
+                                    .fontWeight(.semibold)
+                                    .foregroundStyle(.white)
+                                    .padding(5)
+                                    .background(Color.red)
+                                    .cornerRadius(8.0)
+                                
+                            }.frame(width: 300, height: 40)
+                        }
+                    }.alert("Error contraseña/password", isPresented: $vm.invalid) {
+                        Button("Volver", action: vm.logPressed)
                     }
-                }.alert("Error contraseña/password", isPresented: $vm.invalid) {
-                    Button("Vovler", action: vm.logPressed)
                 }
+                
             }
-            
+        }
+        
+        struct LoginView_Previews: PreviewProvider {
+            static var previews: some View {
+                LoginView()
+            }
         }
     }
-    
-    struct LoginView_Previews: PreviewProvider {
-        static var previews: some View {
-            LoginView()
-        }
-    }
+
     
     
-}
     
     
     /*

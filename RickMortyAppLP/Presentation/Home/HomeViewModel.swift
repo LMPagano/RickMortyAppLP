@@ -16,7 +16,7 @@ class HomeViewModel: ObservableObject{
     var arrayCharacters: [Character]
     @Published var searchText = ""
     @Published var filteredCharacters: [Character]
-    
+
     @Published var log = false
     
     
@@ -49,8 +49,6 @@ class HomeViewModel: ObservableObject{
     
     
     func logOut(){
-        
-        
         
         
     }
