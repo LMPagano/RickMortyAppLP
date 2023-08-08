@@ -30,11 +30,10 @@ class CharactersProvider: CharacterProviderProtocol{
                        species: networkCharacter.species,
                        gender: networkCharacter.gender,
                        image: networkCharacter.image,
-                        origin: networkCharacter.origin.name,
+                          origin: networkCharacter.origin.name,
                           location: networkCharacter.location.name,
                           status: networkCharacter.status,
-                          type: networkCharacter.type
-                          )
+                          type: networkCharacter.type)
          }
      }
  }

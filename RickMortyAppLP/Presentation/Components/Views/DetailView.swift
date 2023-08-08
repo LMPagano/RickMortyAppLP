@@ -24,9 +24,10 @@ struct DetailView: View {
                     .padding(20)
             }placeholder: {
                 ProgressView()
-            }.frame(width: 80, height: 80)
+            }//.frame(width: 80, height: 80)
             VStack(alignment: .leading){
                 Text(character.name)
+                    .bold()
                     .font(.title)
                     .fontWeight(.medium)
                 Text(character.gender)
@@ -52,7 +53,7 @@ struct DetailView: View {
                     .fontWeight(.light)
             
                 
-            }.frame( maxWidth: .infinity, maxHeight: .infinity, alignment: .leading)
+            }.frame( maxWidth: .infinity, maxHeight: .infinity)
         }.padding()
     }
 }
@@ -64,10 +65,10 @@ struct DetailView_Previews: PreviewProvider {
             species: "Especie",
             gender: "Genero",
             image:"https://rickandmortyapi.com/api/character/avatar/94.jpeg",
-            origin: "tierra",
+            origin: "Origen",
             location:"lugar",
-            status: "live",
-            type: "tipo"))
+            status: "Status",
+            type: "Type"))
     }
 }
 

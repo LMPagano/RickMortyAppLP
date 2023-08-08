@@ -6,7 +6,7 @@
 //
 import Foundation
 
-struct Character: Identifiable, Codable{
+struct Character: Identifiable, Codable, Hashable{
     let id: Int
     let name: String
     let species: String
@@ -17,4 +17,5 @@ struct Character: Identifiable, Codable{
     let status: String
     let type: String
 }
+
 

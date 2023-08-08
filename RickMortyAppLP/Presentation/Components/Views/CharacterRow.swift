@@ -15,32 +15,35 @@ struct CharacterRow: View {
     }
     
     var body: some View {
-        VStack{
+        
             HStack{
                 AsyncImage(url: URL(string: character.image)){ image in
                     image.resizable()
-                        .frame(width: 80, height: 80)
+                        .frame(width: 95, height: 95)
                         .cornerRadius(5)
                 }placeholder: {
                     ProgressView()
-                }.frame(width: 80, height: 80)
+                }//.frame(width: 80, height: 80)
                 VStack{
                     Text(character.name)
                         .padding(.trailing)
                         .font(.title)
                         .fontWeight(.medium)
-                    
-                    
-                    Text(character.species)
-                        .font(.subheadline)
-                        .fontWeight(.regular)
-                    
-                }.frame( maxWidth: .infinity, maxHeight: .infinity, alignment: .leading)
-                Text(character.species)
-                    .font(.footnote)
-                    .fontWeight(.light)
+                    Spacer()
+                    VStack{
+                        Text(character.origin)
+                            .font(.subheadline)
+                            .fontWeight(.light)
+                        Text(character.species)
+                            .font(.subheadline)
+                            .fontWeight(.regular)
+                    }
+                }.frame( maxWidth: .infinity, maxHeight: .infinity)
+//                Text(character.species)
+//                    .font(.footnote)
+//                    .fontWeight(.light)
             }.padding()
-        }.frame(width: .infinity, height: 100, alignment: .center)
+            .frame(width: .infinity, height: 120, alignment: .leading)
     }
 }
 
