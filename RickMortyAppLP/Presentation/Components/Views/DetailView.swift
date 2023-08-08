@@ -16,11 +16,12 @@ struct DetailView: View {
     
     var body: some View {
         
-        HStack{
+        VStack{
             AsyncImage(url: URL(string: character.image)){ image in
                 image.resizable()
-                    .frame(width: 80, height: 80)
+                    .frame(width: 200, height: 200)
                     .cornerRadius(5)
+                    .padding(20)
             }placeholder: {
                 ProgressView()
             }.frame(width: 80, height: 80)
@@ -31,18 +32,42 @@ struct DetailView: View {
                 Text(character.gender)
                     .font(.subheadline)
                     .fontWeight(.regular)
+                Text(character.origin)
+                    .font(.subheadline)
+                    .fontWeight(.regular)
+                Text(character.location)
+                    .font(.subheadline)
+                    .fontWeight(.regular)
+                Text(character.status)
+                    .font(.subheadline)
+                    .fontWeight(.regular)
+                Text(character.type)
+                    .font(.subheadline)
+                    .fontWeight(.regular)
+                Text(character.gender)
+                    .font(.subheadline)
+                    .fontWeight(.regular)
+                Text(character.species)
+                    .font(.footnote)
+                    .fontWeight(.light)
+            
                 
             }.frame( maxWidth: .infinity, maxHeight: .infinity, alignment: .leading)
-            Text(character.species)
-                .font(.footnote)
-                .fontWeight(.light)
         }.padding()
     }
 }
 
 struct DetailView_Previews: PreviewProvider {
     static var previews: some View {
-        DetailView(character: Character(id: 1, name: "Personaje", species: "Especie", gender: "Genero", image:"https://rickandmortyapi.com/api/character/avatar/94.jpeg"))
+        DetailView(character: Character(id: 1,
+            name: "Personaje",
+            species: "Especie",
+            gender: "Genero",
+            image:"https://rickandmortyapi.com/api/character/avatar/94.jpeg",
+            origin: "tierra",
+            location:"lugar",
+            status: "live",
+            type: "tipo"))
     }
 }
 

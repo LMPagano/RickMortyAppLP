@@ -8,8 +8,16 @@
 import SwiftUI
 
  class RemoteDataSourceImp: RepositoryProtocol{
+     //modificacion 8/8
+     private let session: NetworkFetchingProtocol // agregado para tests, hay que modificarlo aca abajo en shared.data por session.data
+     
      private let serverApi: String = "https://rickandmortyapi.com"
      
+     //modificacion 8/8
+     init(session: NetworkFetchingProtocol = URLSession.shared){
+         self.session = session
+     }// iniciado par poder utulizarloa bajo
+
      func getAllCharacters() async throws -> [CharactersNetworkResponseCharacter]{
          var characterNetwork: [CharactersNetworkResponseCharacter] = []
          for num in 1...2{ //1...41
@@ -18,10 +26,21 @@ import SwiftUI
      return characterNetwork
      }
  
+     
+     //modificacion 8/8
+     
+//     func getAllCharacterByPages(num: Int) async throws -> CharactersNetworkResponse{
+//         let (data, _) = try await session.data(url: URL(string: serverApi + "/api/character/?page=\(num)")!)
+//         return try JSONDecoder().decode(CharactersNetworkResponse.self, from: data)
+//     }
+     
+      //BackUp modificado 8/8
+     
      func getAllCharacterByPages(num: Int) async throws -> CharactersNetworkResponse{
          let (data, _) = try await URLSession.shared.data(from: URL(string: serverApi + "/api/character/?page=\(num)")!)
          return try JSONDecoder().decode(CharactersNetworkResponse.self, from: data)
      }
+
      
      func loginApp() {
  

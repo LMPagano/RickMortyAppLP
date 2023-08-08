@@ -1,0 +1,37 @@
+{
+  "configurations" : [
+    {
+      "id" : "33DDAB8A-0B02-4CA4-B0ED-6F490EC07623",
+      "name" : "Test Scheme Action",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "targetForVariableExpansion" : {
+      "containerPath" : "container:RickMortyAppLP.xcodeproj",
+      "identifier" : "13216BB42A79950C00920634",
+      "name" : "RickMortyAppLP"
+    }
+  },
+  "testTargets" : [
+    {
+      "parallelizable" : true,
+      "target" : {
+        "containerPath" : "container:RickMortyAppLP.xcodeproj",
+        "identifier" : "13216BC42A79950D00920634",
+        "name" : "RickMortyAppLPTests"
+      }
+    },
+    {
+      "parallelizable" : true,
+      "target" : {
+        "containerPath" : "container:RickMortyAppLP.xcodeproj",
+        "identifier" : "13216BCE2A79950D00920634",
+        "name" : "RickMortyAppLPUITests"
+      }
+    }
+  ],
+  "version" : 1
+}

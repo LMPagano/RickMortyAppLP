@@ -7,8 +7,6 @@
 
 import SwiftUI
 
-//extension LoginView {
-    
     class LoginViewModel: ObservableObject {
 //        @AppStorage("AUTH_KEY") var authenticated = false {
 //            willSet { objectWillChange.send() }
@@ -19,7 +17,7 @@ import SwiftUI
 //        // Keep filled ONLY for debugging
         @Published var password = "1234" // Keep filled ONLY for debugging
         @Published var invalid: Bool = false
-        
+
         private var sampleUser = "username"
         private var samplePassword = "1234"
         
@@ -39,18 +37,7 @@ import SwiftUI
 //            }
         }
 
-//        func authenticate(user: String, pass: String) {
-//            // Check for user
-//            guard user.lowercased() == sampleUser else {
-//                self.invalid = true
-//                return }
-//
-//            // Check for password
-//            guard pass.lowercased() == samplePassword else {
-//                self.invalid = true
-//                return }
-          
-            func authenticate() {
+        @MainActor func authenticate() {
                 // Check for user
                 guard self.username.lowercased() == sampleUser else {
                     self.invalid = true
@@ -66,11 +53,10 @@ import SwiftUI
         
         func logOut()  {
             print("Se esta por togglear \(authenticated)")
-           return LoginView()
         }
 
         func logPressed() {
             print("Boton presionado")
         }
     }
-//}
+

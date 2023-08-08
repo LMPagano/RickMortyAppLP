@@ -22,8 +22,8 @@ struct CharactersNetworkResponse : Codable{
 }
 
 struct CharactersNetworkResponseInfo : Codable{
-    let count:Int//": 826
-    let pages:Int//": 42
+    let count:Int //826
+    let pages:Int //42
     let next:String
     let prev:String?//": null
 }
@@ -37,13 +37,12 @@ struct CharactersNetworkResponseCharacter: Identifiable, Codable {
     let gender: String
     let origin, location: CharactersNetworkResponseCharacterLocation
     let image: String
-    let episode: [String]
     let url: String
     let created: String
 }
 
 struct CharactersNetworkResponseCharacterLocation: Codable {
-    let name:String//": "Citadel of Ricks"
+    let name:String
     let url:String
 }
 

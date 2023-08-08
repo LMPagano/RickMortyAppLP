@@ -14,12 +14,10 @@ struct HomeView: View {
     @ObservedObject private var homeViewModel: HomeViewModel = HomeViewModel()
     @State var busqueda = ""
     @State private var showGreeting = true
-    
-    
-    @State private var selection = 0
+
     
     var body: some View {
-        TabView(selection: $selection) {
+        TabView() {
             NavigationView{
                 VStack{
                     switch homeViewModel.charactersState{
@@ -38,37 +36,21 @@ struct HomeView: View {
                             }
                         }
                     }
-                }.onAppear(){homeViewModel.onLoad()}
+                }
+                .onAppear(){homeViewModel.onLoad()}
                 .navigationTitle("Wiki Rick y Morty")
                 .navigationBarTitleDisplayMode(.inline)
-                
-                
-//                .navigationBarItems(trailing: Button(action: {}, label: {
-//                                     NavigationLink(destination: LoginView()) {
-//                                          Text("Log Out")}}))
-                
-                //            .navigationBarItems(trailing:
-                //
-                //            Button(action: {
-                //
-                //
-                //                        print("Log out")
-                //                    }, label: {
-                //                        Text("Log out")
-                //                    })
-                //
-                //
-                //            )
+                .navigationBarItems(trailing: Button(action: {}, label: {
+                                     NavigationLink(destination:LoginView().navigationBarBackButtonHidden(true))
+                                    {Text("Log Out")}}))
                 
             }.searchable(text: $busqueda).onChange(of: busqueda) { busqueda in  homeViewModel.searchCharacter(textoABuscar: busqueda)}
-            
             .tabItem {Image(systemName: "sparkles")
                         Text("Personajes")}.tag(0)
             NavigationView{
                 ConfigView()
             }.tabItem {Image(systemName: "gear")
                     Text("Configuracion")}.tag(1)
-            
         }
     }
 }

@@ -15,103 +15,41 @@ struct CharacterRow: View {
     }
     
     var body: some View {
-        
-        HStack{
-            AsyncImage(url: URL(string: character.image)){ image in
-                image.resizable()
-                    .frame(width: 80, height: 80)
-                    .cornerRadius(5)
-            }placeholder: {
-                ProgressView()
-            }.frame(width: 80, height: 80)
-            VStack(alignment: .leading){
-                Text(character.name)
-                    .font(.title)
-                    .fontWeight(.medium)
-                Text(character.gender)
-                    .font(.subheadline)
-                    .fontWeight(.regular)
-                
-            }.frame( maxWidth: .infinity, maxHeight: .infinity, alignment: .leading)
-            Text(character.species)
-                .font(.footnote)
-                .fontWeight(.light)
-        }.padding()
-       
+        VStack{
+            HStack{
+                AsyncImage(url: URL(string: character.image)){ image in
+                    image.resizable()
+                        .frame(width: 80, height: 80)
+                        .cornerRadius(5)
+                }placeholder: {
+                    ProgressView()
+                }.frame(width: 80, height: 80)
+                VStack{
+                    Text(character.name)
+                        .padding(.trailing)
+                        .font(.title)
+                        .fontWeight(.medium)
+                    
+                    
+                    Text(character.species)
+                        .font(.subheadline)
+                        .fontWeight(.regular)
+                    
+                }.frame( maxWidth: .infinity, maxHeight: .infinity, alignment: .leading)
+                Text(character.species)
+                    .font(.footnote)
+                    .fontWeight(.light)
+            }.padding()
+        }.frame(width: .infinity, height: 100, alignment: .center)
     }
 }
 
 struct CharacterRow_Previews: PreviewProvider {
     static var previews: some View {
         CharacterRow(
-            character: Character(id: 1, name: "Personaje", species: "Especie", gender: "Genero", image:"https://rickandmortyapi.com/api/character/avatar/94.jpeg"))
+            character: Character(id: 1, name: "Personaje", species: "Especie", gender: "Genero", image:"https://rickandmortyapi.com/api/character/avatar/94.jpeg", origin: "tierra",
+                                 location:"lugar",
+                                 status: "live",
+                                 type: "tipo"))
     }
 }
-
-
-// 7/8 BU
-
-/*
-HStack{
-    AsyncImage(url: URL(string: character.image)){ image in
-        image.resizable()
-            .frame(width: 80, height: 80)
-            .cornerRadius(5)
-    }placeholder: {
-        ProgressView()
-    }.frame(width: 80, height: 80)
-    VStack(alignment: .leading){
-        Text(character.name)
-            .font(.title)
-            .fontWeight(.medium)
-        Text(character.gender)
-            .font(.subheadline)
-            .fontWeight(.regular)
-        
-    }.frame( maxWidth: .infinity, maxHeight: .infinity, alignment: .leading)
-    Text(character.species)
-        .font(.footnote)
-        .fontWeight(.light)
-}.padding()
-
-
-*/
-
-
-//Cuadrado
-
-/*
- 
- 
- ZStack{
-     AsyncImage(url: URL(string: character.image)){ image in
-         image.resizable()
-             .frame(width: 140, height: 140)
-             .cornerRadius(5)
-     
- }placeholder: {
-     ProgressView()
- }.frame(width: 80, height: 80)
-     
-     VStack{
-             
-         //                VStack(alignment: .leading){
-         Text(character.name)
-             .font(.title2)
-             .fontWeight(.medium)
-         //                    Text(character.gender)
-         //                        .font(.subheadline)
-         //                        .fontWeight(.regular)
-         
-     }
-     //                .frame( maxWidth: .infinity, maxHeight: .infinity, alignment: .leading)
-     //                Text(character.species)
-     //                    .font(.footnote)
-     //                    .fontWeight(.light)
- }
-//        .padding(20)
- //    }
- 
- 
- 
- */

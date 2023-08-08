@@ -8,7 +8,6 @@
 import Foundation
 import SwiftUI
 
-
 @MainActor
 class HomeViewModel: ObservableObject{
     
@@ -22,15 +21,15 @@ class HomeViewModel: ObservableObject{
     
     let charactersProvider: CharactersProvider
     
-    init() {
+    init(characterProvider: CharactersProvider = CharactersProvider(charactersState: CharacterViewModelState.initial)) {
         self.charactersState = CharacterViewModelState.initial
-        self.charactersProvider = CharactersProvider(charactersState: CharacterViewModelState.initial)
+        self.charactersProvider = characterProvider
         self.arrayCharacters = []
         self.filteredCharacters = []
     }
     
     func onLoad(){
-        Task.init{arrayCharacters = await charactersProvider.provide()
+        Task{arrayCharacters = await charactersProvider.provide()
             filteredCharacters = arrayCharacters
             charactersState = CharacterViewModelState.loaded
                     }
@@ -44,16 +43,10 @@ class HomeViewModel: ObservableObject{
                 character.name.contains(textoABuscar)
             }
         }
-        
     }
-    
     
     func logOut(){
-        
-        
     }
-    
-    
 }
 
 

@@ -10,14 +10,9 @@ import Foundation
 
 
 protocol RepositoryProtocol{
-    //TODO: - ver comentario y funcionalidad Combine
-    //Creo Protocolo con la funcion que trae info del repo y lo asigno por combine con el output:el objeto Characters y la Failure:  Error
-    
+    // 5/8 agregue el condicional a CharactersNetworkResponse
+    //MARK: - Funcion llamado api
+    func getAllCharacters() async throws -> [CharactersNetworkResponseCharacter]
     func loginApp ()
 
-    
-    // 5/8 agregue el condicional a CharactersNetworkResponse
-    
-                            //AnyPublisher<CharactersNetworkResponse, Error>
-    func getAllCharacters() async throws -> [CharactersNetworkResponseCharacter]
 }

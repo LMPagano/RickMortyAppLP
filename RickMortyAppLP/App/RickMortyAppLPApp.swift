@@ -8,6 +8,7 @@
 import SwiftUI
 
 @main
+
 struct RickMortyAppLPApp: App {
     var body: some Scene {
         WindowGroup {
