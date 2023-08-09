@@ -8,14 +8,15 @@
 import SwiftUI
 
     class LoginViewModel: ObservableObject {
+        
 //        @AppStorage("AUTH_KEY") var authenticated = false {
 //            willSet { objectWillChange.send() }
 //        }
 //        @AppStorage("USER_KEY") var username = ""
         var authenticated = false
         var username = "username"
-//        // Keep filled ONLY for debugging
-        @Published var password = "1234" // Keep filled ONLY for debugging
+
+        @Published var password = "1234"
         @Published var invalid: Bool = false
 
         private var sampleUser = "username"
@@ -28,26 +29,19 @@ import SwiftUI
         }
         
         func toggleAuthentication() {
-            // Make sure that the password does not save.
             self.password = ""
-            
             authenticated.toggle()
-//            withAnimation(.spring()) {
-//                authenticated.toggle()
-//            }
         }
 
         @MainActor func authenticate() {
-                // Check for user
                 guard self.username.lowercased() == sampleUser else {
                     self.invalid = true
                     return }
                 
-                // Check for password
                 guard self.password.lowercased() == samplePassword else {
                     self.invalid = true
                     return }
-         
+            
             toggleAuthentication()
         }
         

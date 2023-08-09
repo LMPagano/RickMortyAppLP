@@ -9,9 +9,7 @@ import SwiftUI
 import MessageUI
 
 struct ConfigView: View {
-        
     @StateObject private var loginViewModel = LoginViewModel()
-    
     @State var configViewModel: ConfigViewModel
     @AppStorage("isDarkModeOn") private var isDarkModeOn = false
     
@@ -19,7 +17,6 @@ struct ConfigView: View {
         VStack {
             
         //MARK: - Informacion
-            
             Form {
                 Section {
                     //Contribucion
@@ -68,7 +65,11 @@ struct ConfigView: View {
                     }
                 }//: DarkMode toggle
             }
-
+            VStack{
+                NavigationStack(){
+                    FooterConfigView()
+                }
+            }
         }.navigationTitle("Info y preferencias")
         .navigationBarTitleDisplayMode(.inline)
     }

@@ -8,9 +8,7 @@
 import SwiftUI
 
 struct DetailView: View {
-    
     var character: Character
-    
     init(character: Character) {
         self.character = character
     }

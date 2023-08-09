@@ -49,7 +49,6 @@ class HomeViewModel: ObservableObject{
         }
     }
     
-    
     func showQOfCharacters()-> String?{
         var textViewCharacters = "Cantidad: \(filteredCharacters.count)"
         
@@ -61,6 +60,7 @@ class HomeViewModel: ObservableObject{
     }
     
 }
+
 
 
 

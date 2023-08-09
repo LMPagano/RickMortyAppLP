@@ -7,8 +7,6 @@
 import SwiftUI
 
 struct HomeView: View {
-    
-
     @ObservedObject private var homeViewModel: HomeViewModel = HomeViewModel()
     @State var busqueda = ""
 
@@ -20,7 +18,7 @@ struct HomeView: View {
                         Text(homeViewModel.showQOfCharacters() ?? "").font(.caption)
                             .rotation3DEffect(.degrees(25), axis: (x: 1, y: 0, z: 0))
                         .shadow(color: .gray, radius: 2, x: 0, y: 5)
-                    }.offset(x: -140)
+                    }.offset(x: -150)
                     switch homeViewModel.charactersState{
                     case .initial:
                         ProgressView()
@@ -29,7 +27,7 @@ struct HomeView: View {
                     case .error:
                         Text("Error")
                     case .loaded:
-                        ScrollView{
+                        ScrollView(.vertical){
                             ForEach(homeViewModel.filteredCharacters){ result in
                                 NavigationLink(destination: DetailView(character: result)) {
                                     CharacterRow(character: result)
