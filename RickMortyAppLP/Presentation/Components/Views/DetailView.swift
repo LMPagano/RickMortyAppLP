@@ -34,16 +34,7 @@ struct DetailView: View {
                     .bold()
                     .font(.title)
                     .fontWeight(.medium)
-                
-                // 9/8
-                //                Button{
-                //                    favorit.toggle()
-                //                }label:{
-                //                    if favorit{
-                //                        Image(systemName: "star.fill").foregroundColor(Color.yellow)
-                //                    }else{
-                //                        Image(systemName: "star").foregroundColor(Color.black)}
-                //                }
+
             }
             VStack{
                 Text("Genero: \(character.gender)")
@@ -84,8 +75,7 @@ struct DetailView_Previews: PreviewProvider {
             origin: "Origen",
             location:"lugar",
             status: "Status",
-            type: "Type",
-            favorite: false))
+            type: "Type"))
     }
 }
 

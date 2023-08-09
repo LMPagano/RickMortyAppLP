@@ -16,9 +16,6 @@ struct Character: Identifiable, Codable, Hashable{
     let location: String
     let status: String
     let type: String
-    
-    //9/8
-    var favorite: Bool?
 }
 
 

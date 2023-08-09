@@ -16,7 +16,11 @@ struct HomeView: View {
         TabView() {
             NavigationView{
                 VStack{
-
+                    VStack{
+                        Text(homeViewModel.showQOfCharacters() ?? "").font(.caption)
+                            .rotation3DEffect(.degrees(25), axis: (x: 1, y: 0, z: 0))
+                        .shadow(color: .gray, radius: 2, x: 0, y: 5)
+                    }.offset(x: -140)
                     switch homeViewModel.charactersState{
                     case .initial:
                         ProgressView()
@@ -44,7 +48,7 @@ struct HomeView: View {
             .tabItem {Image(systemName: "sparkles")
                         Text("Personajes")}.tag(0)
             NavigationView{
-                ConfigView(showFavorites: false, configViewModel: ConfigViewModel())
+                ConfigView(configViewModel: ConfigViewModel())
             }.tabItem {Image(systemName: "gear")
                     Text("Configuracion")}.tag(1)
         }

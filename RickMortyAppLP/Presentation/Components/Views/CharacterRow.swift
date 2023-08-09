@@ -52,7 +52,6 @@ struct CharacterRow_Previews: PreviewProvider {
             character: Character(id: 1, name: "Personaje", species: "Especie", gender: "Genero", image:"https://rickandmortyapi.com/api/character/avatar/94.jpeg", origin: "tierra",
                                  location:"lugar",
                                  status: "live",
-                                 type: "tipo",
-                                 favorite:true))
+                                 type: "tipo"))
     }
 }

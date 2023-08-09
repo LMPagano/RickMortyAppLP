@@ -33,8 +33,7 @@ final class CharactersProvider: CharacterProviderProtocol{
                           origin: networkCharacter.origin.name,
                           location: networkCharacter.location.name,
                           status: networkCharacter.status,
-                          type: networkCharacter.type,
-                          favorite: Bool())
+                          type: networkCharacter.type)
          }
      }
  }

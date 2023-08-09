@@ -278,7 +278,6 @@
 		13216BEA2A7996C500920634 /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				13101EBC2A82301A0028FCDA /* ResetPassView.swift */,
 				13216BF62A79B22000920634 /* HomeView.swift */,
 				13216BF82A79B23100920634 /* HomeViewModel.swift */,
 			);
@@ -296,6 +295,8 @@
 		13216BEC2A7996D000920634 /* ConfigView */ = {
 			isa = PBXGroup;
 			children = (
+				1379A8052A800FD700E1AF97 /* ConfigView.swift */,
+				13101ED02A83ABC80028FCDA /* ConfigViewModel.swift */,
 			);
 			path = ConfigView;
 			sourceTree = "<group>";
@@ -361,10 +362,9 @@
 			children = (
 				13216C622A7C087B00920634 /* CharacterRow.swift */,
 				1379A8032A8003F000E1AF97 /* DetailView.swift */,
-				1379A8052A800FD700E1AF97 /* ConfigView.swift */,
-				13101ED02A83ABC80028FCDA /* ConfigViewModel.swift */,
 				13101EC82A82588A0028FCDA /* PruebaView.swift */,
 				13101ECA2A8259E10028FCDA /* PruebaView2.swift */,
+				13101EBC2A82301A0028FCDA /* ResetPassView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";

@@ -12,10 +12,7 @@ struct ConfigView: View {
         
     @StateObject private var loginViewModel = LoginViewModel()
     
-    // 9/8
-    @State var showFavorites = false
     @State var configViewModel: ConfigViewModel
-    
     @AppStorage("isDarkModeOn") private var isDarkModeOn = false
     
     var body: some View {
@@ -26,9 +23,7 @@ struct ConfigView: View {
             Form {
                 Section {
                     //Contribucion
-                    Button {
-                     
-                    } label: {
+                    Link(destination: URL(string: "https://www.openbank.es/")!){
                         HStack {
                             Image(systemName: "banknote.fill")
                             Text("Contribuir")
@@ -56,33 +51,24 @@ struct ConfigView: View {
                     Text("Contacto")
                 }
 
-                
                 Section(header: Text("Información")) {
                     Link(destination: URL(string: "https://github.com/LMPagano")!) {
                         HStack {
                             Image(systemName: "person")
-                            Text("Desarrollador")
+                            Text("Desarrollador -> git")
                         }
                     }
-                }//End of comunications section
+                }
+                //:End of comunications section
                 
                 
                 Section(header: Text("Apariencia"), footer: Text("Opciones de configuracion")) {
                     Toggle(isOn: $isDarkModeOn) {
                         Text("Dark Mode")
                     }
-                }
-                
-            }//: DarkMode toggle
-                    Toggle(isOn: $showFavorites){
-                        Text("Mostrar Favoritos")
-                    }
-        
-            
-//            Button("LogOut"){
-//                loginViewModel.logOut()
-//            print("Logout button pressed")
-//            }
+                }//: DarkMode toggle
+            }
+
         }.navigationTitle("Info y preferencias")
         .navigationBarTitleDisplayMode(.inline)
     }
@@ -90,6 +76,6 @@ struct ConfigView: View {
 
 struct Recoveryview_Previews: PreviewProvider {
     static var previews: some View {
-        ConfigView(showFavorites: false, configViewModel: ConfigViewModel())
+        ConfigView(configViewModel: ConfigViewModel())
     }
 }
