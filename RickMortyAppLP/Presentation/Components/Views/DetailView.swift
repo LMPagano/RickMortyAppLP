@@ -10,27 +10,43 @@ import SwiftUI
 struct DetailView: View {
     
     var character: Character
+    
     init(character: Character) {
         self.character = character
     }
     
+//    @Binding var favorit: Bool
+    
     var body: some View {
-        
         VStack{
-            AsyncImage(url: URL(string: character.image)){ image in
-                image.resizable()
-                    .frame(width: 200, height: 200)
-                    .cornerRadius(5)
-                    .padding(20)
-            }placeholder: {
-                ProgressView()
-            }//.frame(width: 80, height: 80)
+            VStack{
+                AsyncImage(url: URL(string: character.image)){ image in
+                    image.resizable()
+                        .frame(width: 300, height: 300)
+                        .cornerRadius(5)
+                        .padding()
+                }placeholder: {
+                    ProgressView()
+                }
+            }.offset(y: -100)
             VStack(alignment: .leading){
                 Text(character.name)
                     .bold()
                     .font(.title)
                     .fontWeight(.medium)
-                Text(character.gender)
+                
+                // 9/8
+                //                Button{
+                //                    favorit.toggle()
+                //                }label:{
+                //                    if favorit{
+                //                        Image(systemName: "star.fill").foregroundColor(Color.yellow)
+                //                    }else{
+                //                        Image(systemName: "star").foregroundColor(Color.black)}
+                //                }
+            }
+            VStack{
+                Text("Genero: \(character.gender)")
                     .font(.subheadline)
                     .fontWeight(.regular)
                 Text(character.origin)
@@ -51,10 +67,10 @@ struct DetailView: View {
                 Text(character.species)
                     .font(.footnote)
                     .fontWeight(.light)
+            }
             
-                
-            }.frame( maxWidth: .infinity, maxHeight: .infinity)
-        }.padding()
+            
+        }
     }
 }
 
@@ -68,7 +84,8 @@ struct DetailView_Previews: PreviewProvider {
             origin: "Origen",
             location:"lugar",
             status: "Status",
-            type: "Type"))
+            type: "Type",
+            favorite: false))
     }
 }
 

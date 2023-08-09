@@ -23,6 +23,9 @@ class HomeViewModel: ObservableObject{
     @Published var searchText = ""
     @Published var filteredCharacters: [Character]
     
+    //9/8
+    @Published var favoriteCharacters: [Character]
+    
 //    @Published var log = false
     
     
@@ -33,6 +36,9 @@ class HomeViewModel: ObservableObject{
         self.charactersProvider = characterProvider
         self.arrayCharacters = []
         self.filteredCharacters = []
+        
+        //9/8
+        self.favoriteCharacters = []
     }
     
     func onLoad(){
@@ -51,6 +57,8 @@ class HomeViewModel: ObservableObject{
             }
         }
     }
+    
+    
 }
 
 

@@ -4,20 +4,19 @@
 //
 //  Created by Pagano Leandro Manuel on 1/8/23.
 //
-
 import SwiftUI
 
 struct HomeView: View {
     
-    // 6/8 cambie de StateObject a ObservedObjet
+
     @ObservedObject private var homeViewModel: HomeViewModel = HomeViewModel()
     @State var busqueda = ""
-    @State private var showGreeting = true
 
     var body: some View {
         TabView() {
             NavigationView{
                 VStack{
+
                     switch homeViewModel.charactersState{
                     case .initial:
                         ProgressView()
@@ -45,7 +44,7 @@ struct HomeView: View {
             .tabItem {Image(systemName: "sparkles")
                         Text("Personajes")}.tag(0)
             NavigationView{
-                ConfigView()
+                ConfigView(showFavorites: false, configViewModel: ConfigViewModel())
             }.tabItem {Image(systemName: "gear")
                     Text("Configuracion")}.tag(1)
         }
