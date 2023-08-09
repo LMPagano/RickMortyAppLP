@@ -7,7 +7,6 @@
 
 import SwiftUI
 
-
 struct HomeView: View {
     
     // 6/8 cambie de StateObject a ObservedObjet
@@ -15,7 +14,6 @@ struct HomeView: View {
     @State var busqueda = ""
     @State private var showGreeting = true
 
-    
     var body: some View {
         TabView() {
             NavigationView{
@@ -40,8 +38,7 @@ struct HomeView: View {
                 .onAppear(){homeViewModel.onLoad()}
                 .navigationTitle("Wiki Rick y Morty")
                 .navigationBarTitleDisplayMode(.inline)
-                .navigationBarItems(trailing: Button(action: {}, label: {
-                                     NavigationLink(destination:LoginView().navigationBarBackButtonHidden(true))
+                .navigationBarItems(trailing: Button(action: {}, label: {NavigationLink(destination:LoginView().navigationBarBackButtonHidden(true))
                                     {Text("Log Out")}}))
                 
             }.searchable(text: $busqueda).onChange(of: busqueda) { busqueda in  homeViewModel.searchCharacter(textoABuscar: busqueda)}

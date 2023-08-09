@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		13101EB82A8224500028FCDA /* HomeViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13101EB72A8224500028FCDA /* HomeViewModelTests.swift */; };
 		13101EBA2A8226ED0028FCDA /* CharacterProviderProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13101EB92A8226ED0028FCDA /* CharacterProviderProtocol.swift */; };
 		13101EBD2A82301A0028FCDA /* ResetPassView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13101EBC2A82301A0028FCDA /* ResetPassView.swift */; };
 		13101EBF2A823C010028FCDA /* URLSessionExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13101EBE2A823C010028FCDA /* URLSessionExtension.swift */; };
@@ -16,6 +15,8 @@
 		13101EC72A823D520028FCDA /* NetworkFetchingProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13101EC62A823D520028FCDA /* NetworkFetchingProtocol.swift */; };
 		13101EC92A82588A0028FCDA /* PruebaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13101EC82A82588A0028FCDA /* PruebaView.swift */; };
 		13101ECB2A8259E10028FCDA /* PruebaView2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13101ECA2A8259E10028FCDA /* PruebaView2.swift */; };
+		13101ECD2A8394710028FCDA /* RepositoryProtocolMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13101ECC2A8394710028FCDA /* RepositoryProtocolMock.swift */; };
+		13101ECF2A8394840028FCDA /* CharacterProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13101ECE2A8394840028FCDA /* CharacterProviderTests.swift */; };
 		13216BB92A79950C00920634 /* RickMortyAppLPApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13216BB82A79950C00920634 /* RickMortyAppLPApp.swift */; };
 		13216BBB2A79950C00920634 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13216BBA2A79950C00920634 /* ContentView.swift */; };
 		13216BBD2A79950D00920634 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13216BBC2A79950D00920634 /* Assets.xcassets */; };
@@ -58,7 +59,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		13101EB72A8224500028FCDA /* HomeViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModelTests.swift; sourceTree = "<group>"; };
 		13101EB92A8226ED0028FCDA /* CharacterProviderProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterProviderProtocol.swift; sourceTree = "<group>"; };
 		13101EBB2A822EA90028FCDA /* RickMortyAppLP.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = RickMortyAppLP.xctestplan; sourceTree = "<group>"; };
 		13101EBC2A82301A0028FCDA /* ResetPassView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPassView.swift; sourceTree = "<group>"; };
@@ -68,6 +68,8 @@
 		13101EC62A823D520028FCDA /* NetworkFetchingProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkFetchingProtocol.swift; sourceTree = "<group>"; };
 		13101EC82A82588A0028FCDA /* PruebaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PruebaView.swift; sourceTree = "<group>"; };
 		13101ECA2A8259E10028FCDA /* PruebaView2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PruebaView2.swift; sourceTree = "<group>"; };
+		13101ECC2A8394710028FCDA /* RepositoryProtocolMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryProtocolMock.swift; sourceTree = "<group>"; };
+		13101ECE2A8394840028FCDA /* CharacterProviderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterProviderTests.swift; sourceTree = "<group>"; };
 		13216BB52A79950C00920634 /* RickMortyAppLP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RickMortyAppLP.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13216BB82A79950C00920634 /* RickMortyAppLPApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RickMortyAppLPApp.swift; sourceTree = "<group>"; };
 		13216BBA2A79950C00920634 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -148,6 +150,7 @@
 			children = (
 				13101EC22A823CE20028FCDA /* NetworkFetchingMock.swift */,
 				13101EC42A823D0F0028FCDA /* URLProtocolMock.swift */,
+				13101ECC2A8394710028FCDA /* RepositoryProtocolMock.swift */,
 			);
 			path = Mocks;
 			sourceTree = "<group>";
@@ -199,8 +202,8 @@
 				13101EB62A8217FE0028FCDA /* TestUtils */,
 				13101EB52A8217D20028FCDA /* Suts */,
 				13216BC92A79950D00920634 /* RickMortyAppLPTests.swift */,
+				13101ECE2A8394840028FCDA /* CharacterProviderTests.swift */,
 				13AD65C82A801F6A0058ECA4 /* RemoteDataSourceImpTests.swift */,
-				13101EB72A8224500028FCDA /* HomeViewModelTests.swift */,
 			);
 			path = RickMortyAppLPTests;
 			sourceTree = "<group>";
@@ -277,6 +280,7 @@
 		13216BEA2A7996C500920634 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				13101EBC2A82301A0028FCDA /* ResetPassView.swift */,
 				13216BF62A79B22000920634 /* HomeView.swift */,
 				13216BF82A79B23100920634 /* HomeViewModel.swift */,
 			);
@@ -362,7 +366,6 @@
 				13216C622A7C087B00920634 /* CharacterRow.swift */,
 				1379A8032A8003F000E1AF97 /* DetailView.swift */,
 				1379A8052A800FD700E1AF97 /* ConfigView.swift */,
-				13101EBC2A82301A0028FCDA /* ResetPassView.swift */,
 				13101EC82A82588A0028FCDA /* PruebaView.swift */,
 				13101ECA2A8259E10028FCDA /* PruebaView2.swift */,
 			);
@@ -530,9 +533,10 @@
 			files = (
 				13101EC52A823D0F0028FCDA /* URLProtocolMock.swift in Sources */,
 				13101EC32A823CE20028FCDA /* NetworkFetchingMock.swift in Sources */,
+				13101ECF2A8394840028FCDA /* CharacterProviderTests.swift in Sources */,
 				13216BCA2A79950D00920634 /* RickMortyAppLPTests.swift in Sources */,
+				13101ECD2A8394710028FCDA /* RepositoryProtocolMock.swift in Sources */,
 				13AD65C92A801F6A0058ECA4 /* RemoteDataSourceImpTests.swift in Sources */,
-				13101EB82A8224500028FCDA /* HomeViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

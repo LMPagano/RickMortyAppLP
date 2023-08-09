@@ -7,90 +7,52 @@
 
 import SwiftUI
 
- class RemoteDataSourceImp: RepositoryProtocol{
-     //modificacion 8/8
-     private let session: NetworkFetchingProtocol // agregado para tests, hay que modificarlo aca abajo en shared.data por session.data
-     
+enum errorResponse: Error{
+    case invalidURL
+    case invalidResponse
+    case invalidData
+}
 
-     
-     //modificacion 8/8
-     init(session: NetworkFetchingProtocol = URLSession.shared){
-         self.session = session
-     }// iniciado par poder utulizarloa bajo
-     
-     private let serverApi: String = "https://rickandmortyapi.com"
-     
-     
-     func getAllCharacters() async throws -> [CharactersNetworkResponseCharacter]{
-         var characterNetwork: [CharactersNetworkResponseCharacter] = []
-         for num in 1...2{ //1...41
-         characterNetwork.append(contentsOf: try await getAllCharacterByPages(num: num).results)
+final class RemoteDataSourceImp: RepositoryProtocol{
+    
+    //modificacion 8/8
+    // agregado para tests, hay que modificarlo aca abajo en shared.data por session.data
+    private let session: NetworkFetchingProtocol
+         init(session: NetworkFetchingProtocol = URLSession.shared){
+             self.session = session
          }
-     return characterNetwork
-     }
- 
-     
-     //modificacion 8/8
-     
-//     func getAllCharacterByPages(num: Int) async throws -> CharactersNetworkResponse{
-//         let (data, _) = try await session.data(url: URL(string: serverApi + "/api/character/?page=\(num)")!)
-//         return try JSONDecoder().decode(CharactersNetworkResponse.self, from: data)
-//     }
-     
-      //BackUp x modificado 8/8
-     
-     func getAllCharacterByPages(num: Int) async throws -> CharactersNetworkResponse{
-         let (data, _) = try await URLSession.shared.data(from: URL(string: serverApi + "/api/character/?page=\(num)")!)
-         return try JSONDecoder().decode(CharactersNetworkResponse.self, from: data)
-     }
- 
- }
- 
- 
-
-
-
-
-
-
-//*/
-
-
-
-//import Combine
-
-
-/*
-///
-class RemoteDataSourceImp: RepositoryProtocol{
-   
-    // 5/8 agrego Struct de erorespara devolver en la llamada a API
     
-    enum WebServiceError: Error {
-        case genericFailure
-        case failedToDecodeData
-        case invalidStatusCode
-    }
-    
-    private let serverApi: String = "https://rickandmortyapi.com"
-                                //AnyPublisher<CharactersNetworkResponse, Error>
-    func getAllCharacters() async throws -> CharactersNetworkResponse? {
+    func getAllCharacterByPages(_ num: Int) async throws -> CharactersNetworkResponse{
 
-        // 5/8 agrego parametro response en la posicion de errores del llamado a la API
-        let (data, response) = try await URLSession.shared.data(from: URL(string:serverApi + "/api/character")!) // concateno Path server
-        guard let networkRequestResponse = response as? HTTPURLResponse,
-              networkRequestResponse.statusCode == 200 else {
-            throw WebServiceError.invalidStatusCode
+        let serverApi = "https://rickandmortyapi.com"
+        let pathPage = "/api/character/?page=\(num)"
+        let concaApi = serverApi + pathPage
+        guard (URL(string: concaApi) != nil) else{
+            throw errorResponse.invalidURL
         }
-        return try JSONDecoder().decode(CharactersNetworkResponse.self, from: data)
-    }
-
-
-
-    func loginApp() {
         
+        let finalUrl = URL(string: concaApi)
+        let urlRequest = URLRequest(url: finalUrl!)
+        
+                                     // 8/8 URLSession.shared.data
+        let (data, response) = try await session.data(url: urlRequest)
+        guard let response = response as? HTTPURLResponse, response.statusCode == 200 else{
+            throw errorResponse.invalidResponse
+        //let (data, response) = try await URLSession.shared.data(from: URL(string: serverApi + "/api/character/?page=\(num)")!)
+        }
+        
+        do{
+            let arrayCharactersNetworkResponse = JSONDecoder()
+            return try arrayCharactersNetworkResponse.decode(CharactersNetworkResponse.self, from: data)
+        }
+    }
+    
+    func getAllCharacters() async throws -> [CharactersNetworkResponseResults]{
+        var characterNetwork: [CharactersNetworkResponseResults] = []
+        for num in 1...2{ //1...41
+            characterNetwork.append(contentsOf: try await getAllCharacterByPages(num).results)
+        }
+        return characterNetwork
     }
     
 }
-
-*/

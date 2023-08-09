@@ -7,18 +7,11 @@
 
 import Foundation
 
- // TODO: - Cleanear esto
-
-enum CharacterViewModelState{
-    case initial
-    case loading
-    case loaded
-    case error
-}
+ // MARK: - Estructura Json API
 
 struct CharactersNetworkResponse : Codable{
     let info: CharactersNetworkResponseInfo
-    let results: [CharactersNetworkResponseCharacter]
+    let results: [CharactersNetworkResponseResults]
 }
 
 struct CharactersNetworkResponseInfo : Codable{
@@ -28,7 +21,7 @@ struct CharactersNetworkResponseInfo : Codable{
     let prev:String?//": null
 }
 
-struct CharactersNetworkResponseCharacter: Identifiable, Codable {
+struct CharactersNetworkResponseResults: Identifiable, Codable {
     let id: Int
     let name: String
     let status: String

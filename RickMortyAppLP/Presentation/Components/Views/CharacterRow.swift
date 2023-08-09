@@ -15,7 +15,6 @@ struct CharacterRow: View {
     }
     
     var body: some View {
-        
             HStack{
                 AsyncImage(url: URL(string: character.image)){ image in
                     image.resizable()

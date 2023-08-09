@@ -51,10 +51,11 @@ import SwiftUI
             toggleAuthentication()
         }
         
-        func logOut()  {
-            print("Se esta por togglear \(authenticated)")
-        }
-
+//        func logOut()  {
+//            print("Se esta por togglear \(authenticated)")
+//        }
+//
+        
         func logPressed() {
             print("Boton presionado")
         }

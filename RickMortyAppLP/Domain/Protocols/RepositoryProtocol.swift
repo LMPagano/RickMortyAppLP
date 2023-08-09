@@ -11,6 +11,7 @@ import Foundation
 
 protocol RepositoryProtocol{
     // 5/8 agregue el condicional a CharactersNetworkResponse
-    //MARK: - Funcion llamado api
-    func getAllCharacters() async throws -> [CharactersNetworkResponseCharacter]
+    //MARK: - Funcion llamado API
+    func getAllCharacters() async throws -> [CharactersNetworkResponseResults]
+    func getAllCharacterByPages(_ : Int) async throws -> CharactersNetworkResponse
 }

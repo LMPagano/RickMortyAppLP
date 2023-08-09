@@ -8,6 +8,13 @@
 import Foundation
 import SwiftUI
 
+enum CharacterViewModelState{
+    case initial
+    case loading
+    case loaded
+    case error
+}
+
 @MainActor
 class HomeViewModel: ObservableObject{
     
@@ -15,8 +22,8 @@ class HomeViewModel: ObservableObject{
     var arrayCharacters: [Character]
     @Published var searchText = ""
     @Published var filteredCharacters: [Character]
-
-    @Published var log = false
+    
+//    @Published var log = false
     
     
     let charactersProvider: CharactersProvider
@@ -43,9 +50,6 @@ class HomeViewModel: ObservableObject{
                 character.name.contains(textoABuscar)
             }
         }
-    }
-    
-    func logOut(){
     }
 }
 
