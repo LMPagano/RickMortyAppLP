@@ -8,7 +8,7 @@
 import Foundation
 @testable import RickMortyAppLP
 
-//final class RepositoryProtocolMock: RepositoryProtocol{
+//final class RepositoryProtocolMock: RemoteDataSourceProtocol{
 //    
 //    func getAllCharacters() async throws -> [RickMortyAppLP.CharactersNetworkResponseResults] {
 //

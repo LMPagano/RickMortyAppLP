@@ -86,7 +86,7 @@ final class RemoteDataSourceImpTests: XCTestCase{
 /*
  final class RemoteDataSourceImpTests: XCTestCase {
 
-     var sut: RepositoryProtocol?
+     var sut: RemoteDataSourceProtocol?
      
      override func setUpWithError() throws {
          try super.setUpWithError()

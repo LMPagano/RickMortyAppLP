@@ -35,7 +35,7 @@ class HomeViewModel: ObservableObject{
         Task{arrayCharacters = await charactersProvider.provide()
             filteredCharacters = arrayCharacters
             charactersState = CharacterViewModelState.loaded
-                    }
+            }
     }
     
     func searchCharacter(textoABuscar: String){

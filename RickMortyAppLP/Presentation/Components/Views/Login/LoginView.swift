@@ -13,21 +13,16 @@ struct LoginView: View {
     @StateObject var vm = LoginViewModel()
 
     var body: some View {
-   
             ZStack{
                 Image("fondoportal")
                     .resizable()
                     .ignoresSafeArea()
-                
+
                 // MARK: - User, password login button
-                
-                // 6/8
-                
                 if vm.authenticated {
                     NavigationStack(){
-                        HomeView()
-                    }
-                }else{
+                        HomeView() }
+                    }else{
                     VStack {
                         Image("logoRM2")
                             .resizable()
@@ -63,11 +58,8 @@ struct LoginView: View {
                             
                         }
                         .frame(width: 150, height: 100)
-                        
-                        
+
                         // MARK: - Login button
-                        
-                        // 7-8
                         Button("Ingresar",role: .cancel, action: vm.authenticate)
                             .buttonStyle(.bordered)
                             .font(.title3)
@@ -76,13 +68,11 @@ struct LoginView: View {
                             .background(Color(uiColor: UIColor(red: 128/255, green: 128/255, blue: 128/255, alpha: 1)))
                             .cornerRadius(9)
                             .shadow(radius: 10, x: 20, y: 10)
-
                         Spacer()
                         HStack{
                             Image("memorymorty")
                                 .resizable()
                                 .frame(width: 40, height: 40)
-                        
                             Button {
 
                             } label: {

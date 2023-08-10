@@ -13,28 +13,25 @@ struct DetailView: View {
         self.character = character
     }
     
-//    @Binding var favorit: Bool
-    
     var body: some View {
         VStack{
             VStack{
-                AsyncImage(url: URL(string: character.image)){ image in
-                    image.resizable()
+                    AsyncImage(url: URL(string: character.image)){ image in
+                        image.resizable()
                         .frame(width: 300, height: 300)
                         .cornerRadius(5)
                         .padding()
-                }placeholder: {
-                    ProgressView()
-                }
-            }.offset(y: -100)
+                        }placeholder: {
+                        ProgressView()
+                        }
+                    }.offset(y: -100)
             VStack(alignment: .leading){
                 Text(character.name)
                     .bold()
                     .font(.largeTitle)
                     .fontWeight(.medium)
-                
-
-            }
+                    }
+            
             VStack(alignment: .leading){
                 Text("Origen: \(character.origin)")
                     .font(.title2)
@@ -54,10 +51,7 @@ struct DetailView: View {
                 Text("Genero: \(character.gender)")
                     .font(.title2)
                     .fontWeight(.regular)
-                
             }
-            
-            
         }
     }
 }

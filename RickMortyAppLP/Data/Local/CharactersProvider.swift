@@ -7,10 +7,11 @@
 import Foundation
  
 final class CharactersProvider: CharacterProviderProtocol{
-     let remoteDataSourceImp: RepositoryProtocol 
-     var charactersState: CharacterViewModelState
+    
+    let remoteDataSourceImp: RemoteDataSourceProtocol
+    var charactersState: CharacterViewModelState
      
-    init(charactersState: CharacterViewModelState, remoteDatasourceImp: RepositoryProtocol = RemoteDataSourceImp()) {
+    init(charactersState: CharacterViewModelState, remoteDatasourceImp: RemoteDataSourceProtocol = RemoteDataSourceImp()) {
          self.charactersState = charactersState
          self.remoteDataSourceImp = remoteDatasourceImp
      }

@@ -9,10 +9,14 @@ import SwiftUI
 
     class LoginViewModel: ObservableObject {
         
-//        @AppStorage("AUTH_KEY") var authenticated = false {
-//            willSet { objectWillChange.send() }
-//        }
-//        @AppStorage("USER_KEY") var username = ""
+        /*
+        //MARK: - Comento para poder forzar el inicio con user y pass asignados abajo
+        @AppStorage("AUTH_KEY") var authenticated = false {
+            willSet { objectWillChange.send() }
+        }
+        @AppStorage("USER_KEY") var username = ""
+        */
+        
         var authenticated = false
         var username = "username"
 
@@ -27,12 +31,15 @@ import SwiftUI
             print("Estado inicio de sesion: \(authenticated)")
             print("Usuario actual: \(username)")
         }
+       
+        //MARK: - Toogler Bool user authenticated
         
         func toggleAuthentication() {
             self.password = ""
             authenticated.toggle()
         }
 
+        //MARK: - Funcion Login
         @MainActor func authenticate() {
                 guard self.username.lowercased() == sampleUser else {
                     self.invalid = true
@@ -48,5 +55,5 @@ import SwiftUI
         func logPressed() {
             print("Boton error contraseña presionado")
         }
-    }
+}
 

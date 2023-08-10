@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct FooterConfigView: View {
-   
+
     let cols: Int = 8
     let spacing: CGFloat = 2
     let imgsize = CGSize(width: 60, height: 60)
@@ -17,6 +17,7 @@ struct FooterConfigView: View {
     var body: some View {
         
         let gridItems = Array(repeating: GridItem(.fixed(imgsize.width), spacing: spacing), count: cols)
+        
         ScrollView(.horizontal){
             LazyVGrid(columns: gridItems, spacing: spacing) {
                 ForEach(0..<40){idx in
@@ -39,11 +40,11 @@ struct FooterConfigView: View {
             (idx / cols) % 2 == 0 }
 }
 
-struct FooterConfigView_Previews: PreviewProvider {
+    struct FooterConfigView_Previews: PreviewProvider {
     static var previews: some View {
-        FooterConfigView()
+            FooterConfigView()
+        }
     }
-}
 
 struct PolygonShape: Shape {
     var sides: Int
@@ -64,9 +65,7 @@ struct PolygonShape: Shape {
                 path.addLine(to: pt) // draw line to next vertex
             }
         }
-        
         path.closeSubpath()
-        
         return path
     }
 }

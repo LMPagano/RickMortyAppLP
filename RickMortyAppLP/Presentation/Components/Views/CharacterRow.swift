@@ -5,9 +5,9 @@
 //  Created by Pagano Leandro Manuel on 3/8/23.
 //
 
- import SwiftUI
+import SwiftUI
 
- struct CharacterRow: View {
+struct CharacterRow: View {
      var character: Character
      
      init(character: Character) {
@@ -29,7 +29,7 @@
                          .padding(.trailing)
                          .font(.title)
                          .fontWeight(.medium)
-//                     Spacer()
+                    //Spacer()
                      VStack{
                          Text(character.origin)
                              .font(.subheadline)
@@ -39,9 +39,7 @@
                              .fontWeight(.regular)
                      }
                  }.frame( maxWidth: .infinity, maxHeight: .infinity)
- //                Text(character.species)
- //                    .font(.footnote)
- //                    .fontWeight(.light)
+
              }.padding()
              .frame(width: .infinity, height: 120, alignment: .leading)
      }

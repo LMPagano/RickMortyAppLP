@@ -8,6 +8,7 @@
 import SwiftUI
 
 class ConfigViewModel{
+    
     func openWhatsApp(){
         let whatsappUrl = URL(string: "https://api.whatsapp.com/send?phone=4432282860&text=Hola")!
         if UIApplication.shared.canOpenURL(whatsappUrl) {

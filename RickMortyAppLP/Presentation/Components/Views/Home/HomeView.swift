@@ -7,6 +7,7 @@
 import SwiftUI
 
 struct HomeView: View {
+    
     @ObservedObject private var homeViewModel: HomeViewModel = HomeViewModel()
     @State var busqueda = ""
 
@@ -31,7 +32,7 @@ struct HomeView: View {
                             ForEach(homeViewModel.filteredCharacters){ result in
                                 NavigationLink(destination: DetailView(character: result)) {
                                     CharacterRow(character: result)
-                                }.buttonStyle(PlainButtonStyle()) // saca lo azul de los links
+                                }.buttonStyle(PlainButtonStyle()) // Saca lo azul de hipervinculo de los links
                             }
                         }
                     }
@@ -45,8 +46,8 @@ struct HomeView: View {
             }.searchable(text: $busqueda).onChange(of: busqueda) { busqueda in  homeViewModel.searchCharacter(textoABuscar: busqueda)}
             .tabItem {Image(systemName: "sparkles")
                         Text("Personajes")}.tag(0)
-            NavigationView{
-                ConfigView(configViewModel: ConfigViewModel())
+                        NavigationView{
+                        ConfigView(configViewModel: ConfigViewModel())
             }.tabItem {Image(systemName: "gear")
                     Text("Configuracion")}.tag(1)
         }

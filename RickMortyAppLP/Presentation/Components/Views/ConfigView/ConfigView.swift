@@ -19,7 +19,7 @@ struct ConfigView: View {
         //MARK: - Informacion
             Form {
                 Section {
-                    //Contribucion
+                    //MARK: - Contribucion
                     Link(destination: URL(string: "https://www.openbank.es/")!){
                         HStack {
                             Image(systemName: "banknote.fill")
@@ -27,7 +27,7 @@ struct ConfigView: View {
                         }
                     }
                     
-                    ///Comentario / bug
+                    //MARK: - Comentario / bug
                     Link(destination: URL(string: "https://docs.google.com/forms/d/e/1FAIpQLScrXxgfxRRo2EKEu6Eyt9QDmZpXFUuvADNbHFGNbdbhG-cqVg/viewform?usp=sf_link")!) {
                         HStack {
                             Image(systemName: "pencil")
@@ -35,7 +35,7 @@ struct ConfigView: View {
                         }
                     }
                     
-                    ///WhatsApp Message
+                    //MARK: - WhatsApp Message
                     Button {
                         configViewModel.openWhatsApp()
                     } label: {
@@ -56,14 +56,14 @@ struct ConfigView: View {
                         }
                     }
                 }
-                //:End of comunications section
+                //:Fin comunicacion
                 
                 
                 Section(header: Text("Apariencia"), footer: Text("Opciones de configuracion")) {
                     Toggle(isOn: $isDarkModeOn) {
                         Text("Dark Mode")
                     }
-                }//: DarkMode toggle
+                }// DarkMode toggle
             }
             VStack{
                 NavigationStack(){

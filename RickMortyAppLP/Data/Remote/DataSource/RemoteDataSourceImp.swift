@@ -13,9 +13,9 @@ enum errorResponse: Error{
     case invalidData
 }
 
-final class RemoteDataSourceImp: RepositoryProtocol{
+final class RemoteDataSourceImp: RemoteDataSourceProtocol{
     
-    //implementacion NetworkFeetchinProtocol para poder mockear en test
+    //implementacion NetworkFeetchinProtocol para poder mockear el test
     private let session: NetworkFetchingProtocol
          init(session: NetworkFetchingProtocol = URLSession.shared){
              self.session = session
@@ -45,7 +45,7 @@ final class RemoteDataSourceImp: RepositoryProtocol{
         }
     }
     
-    //MARK: - Funcion para traer informacion de la API por sus paginas
+    //MARK: - Funcion para traer informacion de la API por pagina
     func getAllCharacters() async throws -> [CharactersNetworkResponseResults]{
         var characterNetwork: [CharactersNetworkResponseResults] = []
         for num in 1...10{ //1...41-> Total de paginas

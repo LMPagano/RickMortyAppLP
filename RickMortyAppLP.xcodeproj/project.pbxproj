@@ -14,16 +14,14 @@
 		13101EC52A823D0F0028FCDA /* URLProtocolMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13101EC42A823D0F0028FCDA /* URLProtocolMock.swift */; };
 		13101EC72A823D520028FCDA /* NetworkFetchingProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13101EC62A823D520028FCDA /* NetworkFetchingProtocol.swift */; };
 		13101ECD2A8394710028FCDA /* RepositoryProtocolMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13101ECC2A8394710028FCDA /* RepositoryProtocolMock.swift */; };
-		13101ECF2A8394840028FCDA /* CharacterProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13101ECE2A8394840028FCDA /* CharacterProviderTests.swift */; };
 		13101ED12A83ABC80028FCDA /* ConfigViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13101ED02A83ABC80028FCDA /* ConfigViewModel.swift */; };
 		13101ED32A842B2E0028FCDA /* FooterConfigView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13101ED22A842B2E0028FCDA /* FooterConfigView.swift */; };
 		13101ED52A84E2700028FCDA /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13216C662A7C0D6000920634 /* Character.swift */; };
-		13101F112A8505750028FCDA /* RemotePlanetDataSourceImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13101F102A8505750028FCDA /* RemotePlanetDataSourceImpl.swift */; };
-		13101F132A8505F70028FCDA /* PlanetRepoProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13101F122A8505F70028FCDA /* PlanetRepoProtocol.swift */; };
 		13101F172A8506520028FCDA /* PlanetViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13101F162A8506520028FCDA /* PlanetViewModel.swift */; };
-		13101F1B2A850A0D0028FCDA /* PlanetProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13101F1A2A850A0D0028FCDA /* PlanetProvider.swift */; };
-		13101F1F2A85208C0028FCDA /* PlanetRepoProtocolData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13101F1E2A85208C0028FCDA /* PlanetRepoProtocolData.swift */; };
 		13101F222A8527F90028FCDA /* PlanetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13101F212A8527F90028FCDA /* PlanetView.swift */; };
+		13101F242A85308B0028FCDA /* HomeViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13101F232A85308B0028FCDA /* HomeViewModelTests.swift */; };
+		13101F262A8530D70028FCDA /* LoginViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13101F252A8530D70028FCDA /* LoginViewModelTests.swift */; };
+		13101F282A853C0B0028FCDA /* HomeViewModelMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13101F272A853C0B0028FCDA /* HomeViewModelMock.swift */; };
 		13216BB92A79950C00920634 /* RickMortyAppLPApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13216BB82A79950C00920634 /* RickMortyAppLPApp.swift */; };
 		13216BBB2A79950C00920634 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13216BBA2A79950C00920634 /* ContentView.swift */; };
 		13216BBD2A79950D00920634 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13216BBC2A79950D00920634 /* Assets.xcassets */; };
@@ -35,7 +33,7 @@
 		13216BF52A79B0F800920634 /* CharactersNetworkResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13216BF42A79B0F700920634 /* CharactersNetworkResponse.swift */; };
 		13216BF72A79B22000920634 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13216BF62A79B22000920634 /* HomeView.swift */; };
 		13216BF92A79B23100920634 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13216BF82A79B23100920634 /* HomeViewModel.swift */; };
-		13216C3B2A7AB1C800920634 /* RepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13216C3A2A7AB1C800920634 /* RepositoryProtocol.swift */; };
+		13216C3B2A7AB1C800920634 /* RemoteDataSourceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13216C3A2A7AB1C800920634 /* RemoteDataSourceProtocol.swift */; };
 		13216C3F2A7AB68E00920634 /* RemoteDataSourceImp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13216C3E2A7AB68E00920634 /* RemoteDataSourceImp.swift */; };
 		13216C632A7C087B00920634 /* CharacterRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13216C622A7C087B00920634 /* CharacterRow.swift */; };
 		13216C672A7C0D6000920634 /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13216C662A7C0D6000920634 /* Character.swift */; };
@@ -72,15 +70,13 @@
 		13101EC42A823D0F0028FCDA /* URLProtocolMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLProtocolMock.swift; sourceTree = "<group>"; };
 		13101EC62A823D520028FCDA /* NetworkFetchingProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkFetchingProtocol.swift; sourceTree = "<group>"; };
 		13101ECC2A8394710028FCDA /* RepositoryProtocolMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryProtocolMock.swift; sourceTree = "<group>"; };
-		13101ECE2A8394840028FCDA /* CharacterProviderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterProviderTests.swift; sourceTree = "<group>"; };
 		13101ED02A83ABC80028FCDA /* ConfigViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigViewModel.swift; sourceTree = "<group>"; };
 		13101ED22A842B2E0028FCDA /* FooterConfigView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FooterConfigView.swift; sourceTree = "<group>"; };
-		13101F102A8505750028FCDA /* RemotePlanetDataSourceImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemotePlanetDataSourceImpl.swift; sourceTree = "<group>"; };
-		13101F122A8505F70028FCDA /* PlanetRepoProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanetRepoProtocol.swift; sourceTree = "<group>"; };
 		13101F162A8506520028FCDA /* PlanetViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanetViewModel.swift; sourceTree = "<group>"; };
-		13101F1A2A850A0D0028FCDA /* PlanetProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanetProvider.swift; sourceTree = "<group>"; };
-		13101F1E2A85208C0028FCDA /* PlanetRepoProtocolData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanetRepoProtocolData.swift; sourceTree = "<group>"; };
 		13101F212A8527F90028FCDA /* PlanetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanetView.swift; sourceTree = "<group>"; };
+		13101F232A85308B0028FCDA /* HomeViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModelTests.swift; sourceTree = "<group>"; };
+		13101F252A8530D70028FCDA /* LoginViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModelTests.swift; sourceTree = "<group>"; };
+		13101F272A853C0B0028FCDA /* HomeViewModelMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModelMock.swift; sourceTree = "<group>"; };
 		13216BB52A79950C00920634 /* RickMortyAppLP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RickMortyAppLP.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13216BB82A79950C00920634 /* RickMortyAppLPApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RickMortyAppLPApp.swift; sourceTree = "<group>"; };
 		13216BBA2A79950C00920634 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -95,7 +91,7 @@
 		13216BF42A79B0F700920634 /* CharactersNetworkResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersNetworkResponse.swift; sourceTree = "<group>"; };
 		13216BF62A79B22000920634 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		13216BF82A79B23100920634 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
-		13216C3A2A7AB1C800920634 /* RepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryProtocol.swift; sourceTree = "<group>"; };
+		13216C3A2A7AB1C800920634 /* RemoteDataSourceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteDataSourceProtocol.swift; sourceTree = "<group>"; };
 		13216C3E2A7AB68E00920634 /* RemoteDataSourceImp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteDataSourceImp.swift; sourceTree = "<group>"; };
 		13216C622A7C087B00920634 /* CharacterRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterRow.swift; sourceTree = "<group>"; };
 		13216C662A7C0D6000920634 /* Character.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
@@ -134,6 +130,8 @@
 		13101EB52A8217D20028FCDA /* Suts */ = {
 			isa = PBXGroup;
 			children = (
+				13101F2D2A8540E50028FCDA /* Remote */,
+				13101F292A8540830028FCDA /* Components */,
 				13101ED42A84DADB0028FCDA /* App */,
 			);
 			path = Suts;
@@ -161,6 +159,7 @@
 				13101EC42A823D0F0028FCDA /* URLProtocolMock.swift */,
 				13101EC22A823CE20028FCDA /* NetworkFetchingMock.swift */,
 				13101ECC2A8394710028FCDA /* RepositoryProtocolMock.swift */,
+				13101F272A853C0B0028FCDA /* HomeViewModelMock.swift */,
 			);
 			path = Mocks;
 			sourceTree = "<group>";
@@ -186,7 +185,6 @@
 			isa = PBXGroup;
 			children = (
 				13216C682A7C119100920634 /* CharactersProvider.swift */,
-				13101F1A2A850A0D0028FCDA /* PlanetProvider.swift */,
 			);
 			path = Local;
 			sourceTree = "<group>";
@@ -197,6 +195,55 @@
 				13216BF42A79B0F700920634 /* CharactersNetworkResponse.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		13101F292A8540830028FCDA /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				13AD65C82A801F6A0058ECA4 /* RemoteDataSourceImpTests.swift */,
+				13101F2A2A8540A00028FCDA /* Views */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		13101F2A2A8540A00028FCDA /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				13101F2C2A8540BE0028FCDA /* HomeView */,
+				13101F2B2A8540B90028FCDA /* LoginView */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		13101F2B2A8540B90028FCDA /* LoginView */ = {
+			isa = PBXGroup;
+			children = (
+				13101F252A8530D70028FCDA /* LoginViewModelTests.swift */,
+			);
+			path = LoginView;
+			sourceTree = "<group>";
+		};
+		13101F2C2A8540BE0028FCDA /* HomeView */ = {
+			isa = PBXGroup;
+			children = (
+				13101F232A85308B0028FCDA /* HomeViewModelTests.swift */,
+			);
+			path = HomeView;
+			sourceTree = "<group>";
+		};
+		13101F2D2A8540E50028FCDA /* Remote */ = {
+			isa = PBXGroup;
+			children = (
+				13101F2E2A8540E90028FCDA /* DataSource */,
+			);
+			path = Remote;
+			sourceTree = "<group>";
+		};
+		13101F2E2A8540E90028FCDA /* DataSource */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = DataSource;
 			sourceTree = "<group>";
 		};
 		13216BAC2A79950C00920634 = {
@@ -245,8 +292,6 @@
 			children = (
 				13101EB62A8217FE0028FCDA /* TestUtils */,
 				13101EB52A8217D20028FCDA /* Suts */,
-				13101ECE2A8394840028FCDA /* CharacterProviderTests.swift */,
-				13AD65C82A801F6A0058ECA4 /* RemoteDataSourceImpTests.swift */,
 			);
 			path = RickMortyAppLPTests;
 			sourceTree = "<group>";
@@ -352,11 +397,9 @@
 		13216BEE2A7996D900920634 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
-				13216C3A2A7AB1C800920634 /* RepositoryProtocol.swift */,
+				13216C3A2A7AB1C800920634 /* RemoteDataSourceProtocol.swift */,
 				13101EB92A8226ED0028FCDA /* CharacterProviderProtocol.swift */,
 				13101EC62A823D520028FCDA /* NetworkFetchingProtocol.swift */,
-				13101F122A8505F70028FCDA /* PlanetRepoProtocol.swift */,
-				13101F1E2A85208C0028FCDA /* PlanetRepoProtocolData.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -397,7 +440,6 @@
 			children = (
 				13101F1D2A850B400028FCDA /* Model */,
 				13216C3E2A7AB68E00920634 /* RemoteDataSourceImp.swift */,
-				13101F102A8505750028FCDA /* RemotePlanetDataSourceImpl.swift */,
 			);
 			path = DataSource;
 			sourceTree = "<group>";
@@ -405,7 +447,6 @@
 		1379A8022A8003C500E1AF97 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				13101F142A85063C0028FCDA /* PlanetView */,
 				13216C622A7C087B00920634 /* CharacterRow.swift */,
 				1379A8032A8003F000E1AF97 /* DetailView.swift */,
 				13101ED22A842B2E0028FCDA /* FooterConfigView.swift */,
@@ -413,6 +454,7 @@
 				13216BE92A7996C000920634 /* Login */,
 				13216BEA2A7996C500920634 /* Home */,
 				13216BEC2A7996D000920634 /* ConfigView */,
+				13101F142A85063C0028FCDA /* PlanetView */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -551,15 +593,11 @@
 				13216BF32A79979000920634 /* LoginView.swift in Sources */,
 				13216C632A7C087B00920634 /* CharacterRow.swift in Sources */,
 				13216BF92A79B23100920634 /* HomeViewModel.swift in Sources */,
-				13101F132A8505F70028FCDA /* PlanetRepoProtocol.swift in Sources */,
 				13101F222A8527F90028FCDA /* PlanetView.swift in Sources */,
 				13216C3F2A7AB68E00920634 /* RemoteDataSourceImp.swift in Sources */,
 				13216BBB2A79950C00920634 /* ContentView.swift in Sources */,
 				13101EBA2A8226ED0028FCDA /* CharacterProviderProtocol.swift in Sources */,
 				1379A8062A800FD700E1AF97 /* ConfigView.swift in Sources */,
-				13101F1B2A850A0D0028FCDA /* PlanetProvider.swift in Sources */,
-				13101F1F2A85208C0028FCDA /* PlanetRepoProtocolData.swift in Sources */,
-				13101F112A8505750028FCDA /* RemotePlanetDataSourceImpl.swift in Sources */,
 				13216BB92A79950C00920634 /* RickMortyAppLPApp.swift in Sources */,
 				13216BF72A79B22000920634 /* HomeView.swift in Sources */,
 				1379A7FD2A7FC7A600E1AF97 /* LoginViewModel.swift in Sources */,
@@ -570,7 +608,7 @@
 				13101EBD2A82301A0028FCDA /* ResetPassView.swift in Sources */,
 				13101EBF2A823C010028FCDA /* URLSessionExtension.swift in Sources */,
 				13216BF52A79B0F800920634 /* CharactersNetworkResponse.swift in Sources */,
-				13216C3B2A7AB1C800920634 /* RepositoryProtocol.swift in Sources */,
+				13216C3B2A7AB1C800920634 /* RemoteDataSourceProtocol.swift in Sources */,
 				1379A8042A8003F000E1AF97 /* DetailView.swift in Sources */,
 				13216C672A7C0D6000920634 /* Character.swift in Sources */,
 			);
@@ -583,10 +621,12 @@
 				13101EC52A823D0F0028FCDA /* URLProtocolMock.swift in Sources */,
 				13101EC32A823CE20028FCDA /* NetworkFetchingMock.swift in Sources */,
 				13101ED52A84E2700028FCDA /* Character.swift in Sources */,
-				13101ECF2A8394840028FCDA /* CharacterProviderTests.swift in Sources */,
 				13216BCA2A79950D00920634 /* RickMortyAppLPTests.swift in Sources */,
+				13101F262A8530D70028FCDA /* LoginViewModelTests.swift in Sources */,
 				13101ECD2A8394710028FCDA /* RepositoryProtocolMock.swift in Sources */,
+				13101F282A853C0B0028FCDA /* HomeViewModelMock.swift in Sources */,
 				13AD65C92A801F6A0058ECA4 /* RemoteDataSourceImpTests.swift in Sources */,
+				13101F242A85308B0028FCDA /* HomeViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
