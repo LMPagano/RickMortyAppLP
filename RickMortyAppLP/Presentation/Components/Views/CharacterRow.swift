@@ -29,7 +29,7 @@
                          .padding(.trailing)
                          .font(.title)
                          .fontWeight(.medium)
-                     Spacer()
+//                     Spacer()
                      VStack{
                          Text(character.origin)
                              .font(.subheadline)

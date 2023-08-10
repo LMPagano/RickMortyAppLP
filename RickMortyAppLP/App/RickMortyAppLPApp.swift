@@ -16,7 +16,6 @@ struct RickMortyAppLPApp: App {
     var body: some Scene {
         WindowGroup {
             LoginView().preferredColorScheme(isDarkModeOn ? .dark : .light)
-            //HomeView(busqueda: "")
         }
     }
 }

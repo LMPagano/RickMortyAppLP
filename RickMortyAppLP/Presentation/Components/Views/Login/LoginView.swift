@@ -62,7 +62,7 @@ struct LoginView: View {
                                 .privacySensitive()
                             
                         }
-                        .frame(width: 272, height: 112)
+                        .frame(width: 150, height: 100)
                         
                         
                         // MARK: - Login button
@@ -73,7 +73,6 @@ struct LoginView: View {
                             .font(.title3)
                             .fontWeight(.semibold)
                             .foregroundStyle(.white)
-                        //                                .frame(width: 138, height: 40)
                             .background(Color(uiColor: UIColor(red: 128/255, green: 128/255, blue: 128/255, alpha: 1)))
                             .cornerRadius(9)
                             .shadow(radius: 10, x: 20, y: 10)
@@ -83,12 +82,12 @@ struct LoginView: View {
                             Image("memorymorty")
                                 .resizable()
                                 .frame(width: 40, height: 40)
-
+                        
                             Button {
 
                             } label: {
                                 Text("No recuerda usuario/contraseña")
-                                //                        .font(.title2)
+
                                     .fontWeight(.semibold)
                                     .foregroundStyle(.white)
                                     .padding(5)

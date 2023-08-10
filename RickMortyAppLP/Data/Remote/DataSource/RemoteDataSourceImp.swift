@@ -15,15 +15,14 @@ enum errorResponse: Error{
 
 final class RemoteDataSourceImp: RepositoryProtocol{
     
-    //modificacion 8/8
-    // agregado para tests, hay que modificarlo aca abajo en shared.data por session.data
+    //implementacion NetworkFeetchinProtocol para poder mockear en test
     private let session: NetworkFetchingProtocol
          init(session: NetworkFetchingProtocol = URLSession.shared){
              self.session = session
          }
     
+    // MARK: - Funcion llamado API
     func getAllCharacterByPages(_ num: Int) async throws -> CharactersNetworkResponse{
-
         let serverApi = "https://rickandmortyapi.com"
         let pathPage = "/api/character/?page=\(num)"
         let concaApi = serverApi + pathPage
@@ -34,11 +33,10 @@ final class RemoteDataSourceImp: RepositoryProtocol{
         let finalUrl = URL(string: concaApi)
         let urlRequest = URLRequest(url: finalUrl!)
         
-                                     // 8/8 URLSession.shared.data
+                                     // 8/8 cambio URLSession.shared.data
         let (data, response) = try await session.data(url: urlRequest)
         guard let response = response as? HTTPURLResponse, response.statusCode == 200 else{
             throw errorResponse.invalidResponse
-        //let (data, response) = try await URLSession.shared.data(from: URL(string: serverApi + "/api/character/?page=\(num)")!)
         }
         
         do{
@@ -47,12 +45,12 @@ final class RemoteDataSourceImp: RepositoryProtocol{
         }
     }
     
+    //MARK: - Funcion para traer informacion de la API por sus paginas
     func getAllCharacters() async throws -> [CharactersNetworkResponseResults]{
         var characterNetwork: [CharactersNetworkResponseResults] = []
-        for num in 1...2{ //1...41
+        for num in 1...10{ //1...41-> Total de paginas
             characterNetwork.append(contentsOf: try await getAllCharacterByPages(num).results)
         }
         return characterNetwork
     }
-    
 }

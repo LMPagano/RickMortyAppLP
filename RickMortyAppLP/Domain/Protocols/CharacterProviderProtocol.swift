@@ -9,4 +9,5 @@ import Foundation
 
 protocol CharacterProviderProtocol{
     func provide()async -> [Character]
+    func mapeo(characterNetworkResponse: [CharactersNetworkResponseResults])-> [Character]
 }

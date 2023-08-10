@@ -30,32 +30,31 @@ struct DetailView: View {
             VStack(alignment: .leading){
                 Text(character.name)
                     .bold()
-                    .font(.title)
+                    .font(.largeTitle)
                     .fontWeight(.medium)
+                
 
             }
-            VStack{
-                Text("Genero: \(character.gender)")
-                    .font(.subheadline)
+            VStack(alignment: .leading){
+                Text("Origen: \(character.origin)")
+                    .font(.title2)
                     .fontWeight(.regular)
-                Text(character.origin)
-                    .font(.subheadline)
+                Text("Locacion: \(character.location)")
+                    .font(.title2)
                     .fontWeight(.regular)
-                Text(character.location)
-                    .font(.subheadline)
+                Text("Estado: \(character.status)")
+                    .font(.title2)
                     .fontWeight(.regular)
-                Text(character.status)
-                    .font(.subheadline)
+                Text("Especie: \(character.species)")
+                    .font(.title2)
                     .fontWeight(.regular)
                 Text(character.type)
-                    .font(.subheadline)
-                    .fontWeight(.regular)
-                Text(character.gender)
-                    .font(.subheadline)
-                    .fontWeight(.regular)
-                Text(character.species)
-                    .font(.footnote)
+                    .font(.title3)
                     .fontWeight(.light)
+                Text("Genero: \(character.gender)")
+                    .font(.title2)
+                    .fontWeight(.regular)
+                
             }
             
             

@@ -7,7 +7,7 @@
 
 import Foundation
 
-// copiado para poder Hacer test del RemoteDataSourceProtocol
+// Extension agregada para poder  modificar codigo y poder testear luego.
 
 extension URLSession: NetworkFetchingProtocol {
     func data(url: URLRequest) async throws -> (Data, URLResponse) {

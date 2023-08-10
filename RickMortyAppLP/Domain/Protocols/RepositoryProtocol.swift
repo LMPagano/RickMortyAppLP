@@ -8,7 +8,6 @@
 import Foundation
 //import Combine
 
-
 protocol RepositoryProtocol{
     // 5/8 agregue el condicional a CharactersNetworkResponse
     //MARK: - Funcion llamado API

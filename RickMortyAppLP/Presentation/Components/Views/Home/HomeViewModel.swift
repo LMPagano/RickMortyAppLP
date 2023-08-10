@@ -24,7 +24,6 @@ class HomeViewModel: ObservableObject{
     @Published var filteredCharacters: [Character]
     
     let charactersProvider: CharactersProvider
-    
     init(characterProvider: CharactersProvider = CharactersProvider(charactersState: CharacterViewModelState.initial)) {
         self.charactersState = CharacterViewModelState.initial
         self.charactersProvider = characterProvider
@@ -50,8 +49,8 @@ class HomeViewModel: ObservableObject{
     }
     
     func showQOfCharacters()-> String?{
-        var textViewCharacters = "Cantidad: \(filteredCharacters.count)"
-        
+        let textViewCharacters = "Cantidad: \(filteredCharacters.count)"
+
         if filteredCharacters.count != arrayCharacters.count{
             return textViewCharacters
         }else{
