@@ -7,18 +7,21 @@
 
 import XCTest
 
+@testable import RickMortyAppLP
+
 final class LoginViewModelTests: XCTestCase {
-
+    var lognViewModel: LoginViewModel = LoginViewModel()
+    
     override func setUpWithError() throws {
-
+        try super.setUpWithError()
     }
 
     override func tearDownWithError() throws {
-    
+        try super.setUpWithError()
     }
 
-    func testExample() throws {
-   
+    func test_authenticateTest() throws {
+        lognViewModel.authenticate()
     }
 
     func testPerformanceExample() throws {

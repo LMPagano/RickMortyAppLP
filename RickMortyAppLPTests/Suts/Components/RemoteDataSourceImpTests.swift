@@ -16,7 +16,6 @@ final class RemoteDataSourceImpTests: XCTestCase{
         let sessionConfiguration = URLSessionConfiguration.ephemeral
         sessionConfiguration.protocolClasses = [URLProtocolMock.self]
         let mockedSession =  URLSession(configuration: sessionConfiguration)
-       
     }
     
     override func tearDownWithError() throws {

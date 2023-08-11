@@ -10,24 +10,25 @@ import XCTest
 
 final class HomeViewModelTests: XCTestCase {
     
-    //MARK: - sut
-    var sut: HomeViewModel
-    
     
     override func setUpWithError() throws {
-        try super.setUpWithError()
-      
+  
     }
 
     override func tearDownWithError() throws {
-        sut = nil
-        try super.setUpWithError()
+      
     }
 
-    func testExample() throws {
-
+    @MainActor func testExample() throws {
+    var homeViewModel: HomeViewModel = HomeViewModel(characterProvider: CharacterProviderMock())
+        
+        homeViewModel.onLoad()
+        XCTAssertEqual(0, homeViewModel.arrayCharacters.count)
         
     }
+    
+    
+    
 
     func testPerformanceExample() throws {
         // This is an example of a performance test case.

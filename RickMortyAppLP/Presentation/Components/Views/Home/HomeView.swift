@@ -36,21 +36,22 @@ struct HomeView: View {
                             }
                         }
                     }
-                }
+                }.accessibilityLabel("Grouping Container")
                 .onAppear(){homeViewModel.onLoad()}
                 .navigationTitle("Wiki Rick y Morty")
                 .navigationBarTitleDisplayMode(.inline)
-                .navigationBarItems(trailing: Button(action: {}, label: {NavigationLink(destination:LoginView().navigationBarBackButtonHidden(true))
-                                    {Text("Log Out")}}))
-                
-            }.searchable(text: $busqueda).onChange(of: busqueda) { busqueda in  homeViewModel.searchCharacter(textoABuscar: busqueda)}
+                .navigationBarItems(trailing: Button(action: {}, label: {NavigationLink(destination:LoginView().navigationBarBackButtonHidden(true)){Text("Log Out")}}))
+            }.searchable(text: $busqueda).onChange(of: busqueda) { busqueda in  homeViewModel.searchCharacter(textoABuscar: busqueda)}.accessibilityLabel("Buscador de personajes")
+                .accessibilityHint("busca personaje")
             .tabItem {Image(systemName: "sparkles")
                         Text("Personajes")}.tag(0)
                         NavigationView{
                         ConfigView(configViewModel: ConfigViewModel())
             }.tabItem {Image(systemName: "gear")
                     Text("Configuracion")}.tag(1)
-        }
+ 
+        }.accessibilityLabel("Wiki Rick y Morty")
+            .accessibilityAddTraits(.isHeader)
     }
 }
     

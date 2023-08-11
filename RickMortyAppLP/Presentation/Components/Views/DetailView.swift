@@ -21,6 +21,7 @@ struct DetailView: View {
                         .frame(width: 300, height: 300)
                         .cornerRadius(5)
                         .padding()
+                        .accessibilityLabel("Imagen Personaje")
                         }placeholder: {
                         ProgressView()
                         }
@@ -30,27 +31,33 @@ struct DetailView: View {
                     .bold()
                     .font(.largeTitle)
                     .fontWeight(.medium)
-                    }
+                    }.accessibilityLabel("Nombre Personaje")
             
             VStack(alignment: .leading){
                 Text("Origen: \(character.origin)")
                     .font(.title2)
                     .fontWeight(.regular)
+                    .accessibilityLabel("Origen Personaje")
                 Text("Locacion: \(character.location)")
                     .font(.title2)
                     .fontWeight(.regular)
+                    .accessibilityLabel("Locacion Personaje")
                 Text("Estado: \(character.status)")
                     .font(.title2)
                     .fontWeight(.regular)
+                    .accessibilityLabel("Estado Personaje")
                 Text("Especie: \(character.species)")
                     .font(.title2)
                     .fontWeight(.regular)
+                    .accessibilityLabel("Especie Personaje")
                 Text(character.type)
                     .font(.title3)
                     .fontWeight(.light)
+                    .accessibilityLabel("Tipo de Personaje")
                 Text("Genero: \(character.gender)")
                     .font(.title2)
                     .fontWeight(.regular)
+                    .accessibilityLabel("Genero Personaje")
             }
         }
     }

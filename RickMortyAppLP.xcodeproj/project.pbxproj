@@ -19,9 +19,9 @@
 		13101ED52A84E2700028FCDA /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13216C662A7C0D6000920634 /* Character.swift */; };
 		13101F172A8506520028FCDA /* PlanetViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13101F162A8506520028FCDA /* PlanetViewModel.swift */; };
 		13101F222A8527F90028FCDA /* PlanetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13101F212A8527F90028FCDA /* PlanetView.swift */; };
-		13101F242A85308B0028FCDA /* HomeViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13101F232A85308B0028FCDA /* HomeViewModelTests.swift */; };
 		13101F262A8530D70028FCDA /* LoginViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13101F252A8530D70028FCDA /* LoginViewModelTests.swift */; };
-		13101F282A853C0B0028FCDA /* HomeViewModelMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13101F272A853C0B0028FCDA /* HomeViewModelMock.swift */; };
+		13101F332A8567990028FCDA /* HomeViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13101F322A8567990028FCDA /* HomeViewModelTests.swift */; };
+		13101F352A8568200028FCDA /* CharacterPoviderMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13101F342A8568200028FCDA /* CharacterPoviderMock.swift */; };
 		13216BB92A79950C00920634 /* RickMortyAppLPApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13216BB82A79950C00920634 /* RickMortyAppLPApp.swift */; };
 		13216BBB2A79950C00920634 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13216BBA2A79950C00920634 /* ContentView.swift */; };
 		13216BBD2A79950D00920634 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13216BBC2A79950D00920634 /* Assets.xcassets */; };
@@ -74,9 +74,9 @@
 		13101ED22A842B2E0028FCDA /* FooterConfigView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FooterConfigView.swift; sourceTree = "<group>"; };
 		13101F162A8506520028FCDA /* PlanetViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanetViewModel.swift; sourceTree = "<group>"; };
 		13101F212A8527F90028FCDA /* PlanetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanetView.swift; sourceTree = "<group>"; };
-		13101F232A85308B0028FCDA /* HomeViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModelTests.swift; sourceTree = "<group>"; };
 		13101F252A8530D70028FCDA /* LoginViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModelTests.swift; sourceTree = "<group>"; };
-		13101F272A853C0B0028FCDA /* HomeViewModelMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModelMock.swift; sourceTree = "<group>"; };
+		13101F322A8567990028FCDA /* HomeViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModelTests.swift; sourceTree = "<group>"; };
+		13101F342A8568200028FCDA /* CharacterPoviderMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterPoviderMock.swift; sourceTree = "<group>"; };
 		13216BB52A79950C00920634 /* RickMortyAppLP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RickMortyAppLP.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13216BB82A79950C00920634 /* RickMortyAppLPApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RickMortyAppLPApp.swift; sourceTree = "<group>"; };
 		13216BBA2A79950C00920634 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -159,7 +159,7 @@
 				13101EC42A823D0F0028FCDA /* URLProtocolMock.swift */,
 				13101EC22A823CE20028FCDA /* NetworkFetchingMock.swift */,
 				13101ECC2A8394710028FCDA /* RepositoryProtocolMock.swift */,
-				13101F272A853C0B0028FCDA /* HomeViewModelMock.swift */,
+				13101F342A8568200028FCDA /* CharacterPoviderMock.swift */,
 			);
 			path = Mocks;
 			sourceTree = "<group>";
@@ -209,7 +209,7 @@
 		13101F2A2A8540A00028FCDA /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				13101F2C2A8540BE0028FCDA /* HomeView */,
+				13101F2F2A8566C00028FCDA /* HomeViewModel */,
 				13101F2B2A8540B90028FCDA /* LoginView */,
 			);
 			path = Views;
@@ -221,14 +221,6 @@
 				13101F252A8530D70028FCDA /* LoginViewModelTests.swift */,
 			);
 			path = LoginView;
-			sourceTree = "<group>";
-		};
-		13101F2C2A8540BE0028FCDA /* HomeView */ = {
-			isa = PBXGroup;
-			children = (
-				13101F232A85308B0028FCDA /* HomeViewModelTests.swift */,
-			);
-			path = HomeView;
 			sourceTree = "<group>";
 		};
 		13101F2D2A8540E50028FCDA /* Remote */ = {
@@ -244,6 +236,14 @@
 			children = (
 			);
 			path = DataSource;
+			sourceTree = "<group>";
+		};
+		13101F2F2A8566C00028FCDA /* HomeViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				13101F322A8567990028FCDA /* HomeViewModelTests.swift */,
+			);
+			path = HomeViewModel;
 			sourceTree = "<group>";
 		};
 		13216BAC2A79950C00920634 = {
@@ -621,12 +621,12 @@
 				13101EC52A823D0F0028FCDA /* URLProtocolMock.swift in Sources */,
 				13101EC32A823CE20028FCDA /* NetworkFetchingMock.swift in Sources */,
 				13101ED52A84E2700028FCDA /* Character.swift in Sources */,
+				13101F332A8567990028FCDA /* HomeViewModelTests.swift in Sources */,
 				13216BCA2A79950D00920634 /* RickMortyAppLPTests.swift in Sources */,
 				13101F262A8530D70028FCDA /* LoginViewModelTests.swift in Sources */,
 				13101ECD2A8394710028FCDA /* RepositoryProtocolMock.swift in Sources */,
-				13101F282A853C0B0028FCDA /* HomeViewModelMock.swift in Sources */,
+				13101F352A8568200028FCDA /* CharacterPoviderMock.swift in Sources */,
 				13AD65C92A801F6A0058ECA4 /* RemoteDataSourceImpTests.swift in Sources */,
-				13101F242A85308B0028FCDA /* HomeViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

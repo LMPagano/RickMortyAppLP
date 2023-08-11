@@ -25,7 +25,8 @@ struct ConfigView: View {
                             Image(systemName: "banknote.fill")
                             Text("Contribuir")
                         }
-                    }
+                    }.accessibilityLabel("Contribuir")
+                    .accessibilityHint("Acceder a cuenta bancaria ")
                     
                     //MARK: - Comentario / bug
                     Link(destination: URL(string: "https://docs.google.com/forms/d/e/1FAIpQLScrXxgfxRRo2EKEu6Eyt9QDmZpXFUuvADNbHFGNbdbhG-cqVg/viewform?usp=sf_link")!) {
@@ -33,7 +34,8 @@ struct ConfigView: View {
                             Image(systemName: "pencil")
                             Text("Reportar Bug o dejanos un comentario")
                         }
-                    }
+                    }.accessibilityLabel("Reportar Bug o comentario")
+                        .accessibilityHint("Acceder a formulario ")
                     
                     //MARK: - WhatsApp Message
                     Button {
@@ -43,7 +45,8 @@ struct ConfigView: View {
                             Image(systemName: "phone.bubble.left")
                             Text("Enviar WhatsApp")
                         }
-                    }
+                    }.accessibilityLabel("Enviar Wp")
+                        .accessibilityHint("Acceder a wp para contactar desarrollador ")
                 } header: {
                     Text("Contacto")
                 }
@@ -64,12 +67,15 @@ struct ConfigView: View {
                         Text("Dark Mode")
                     }
                 }// DarkMode toggle
-            }
+                .accessibilityLabel("Dark mode")
+                    .accessibilityHint("Toogle para elegir modo oscuro ")
+            }.accessibilityLabel("Grouping Container")
             VStack{
                 NavigationStack(){
                     FooterConfigView()
-                }
-            }
+                }.accessibilityLabel("Imagenes miniatura de todos los personajes")
+            }.padding(0)
+            .accessibilityLabel("Grouping Container")
         }.navigationTitle("Info y preferencias")
         .navigationBarTitleDisplayMode(.inline)
     }

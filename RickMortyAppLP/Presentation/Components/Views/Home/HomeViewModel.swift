@@ -23,8 +23,8 @@ class HomeViewModel: ObservableObject{
     @Published var searchText = ""
     @Published var filteredCharacters: [Character]
     
-    let charactersProvider: CharactersProvider
-    init(characterProvider: CharactersProvider = CharactersProvider(charactersState: CharacterViewModelState.initial)) {
+    let charactersProvider: CharacterProviderProtocol
+    init(characterProvider: CharacterProviderProtocol = CharactersProvider(charactersState: CharacterViewModelState.initial)) {
         self.charactersState = CharacterViewModelState.initial
         self.charactersProvider = characterProvider
         self.arrayCharacters = []

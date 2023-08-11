@@ -40,7 +40,7 @@ import SwiftUI
         }
 
         //MARK: - Funcion Login
-        @MainActor func authenticate() {
+        func authenticate() {
                 guard self.username.lowercased() == sampleUser else {
                     self.invalid = true
                     return }

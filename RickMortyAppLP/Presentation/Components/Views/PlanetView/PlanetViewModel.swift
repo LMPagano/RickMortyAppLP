@@ -9,7 +9,7 @@ import Foundation
 
   
  struct Planet:Identifiable ,Codable, Hashable{
-     let id = UUID()
+     var id = UUID()
      var name: String
      var mass, radius: Double
      var period: Int

@@ -20,6 +20,7 @@ struct CharacterRow: View {
                      image.resizable()
                          .frame(width: 95, height: 95)
                          .cornerRadius(12)
+                         .accessibilityLabel("Imagen Personaje")
                  }placeholder: {
                      ProgressView()
                  }
@@ -29,14 +30,17 @@ struct CharacterRow: View {
                          .padding(.trailing)
                          .font(.title)
                          .fontWeight(.medium)
+                         .accessibilityLabel("Nombre Personje")
                     //Spacer()
                      VStack{
                          Text(character.origin)
                              .font(.subheadline)
                              .fontWeight(.light)
+                             .accessibilityLabel("Origen Personaje")
                          Text(character.species)
                              .font(.subheadline)
                              .fontWeight(.regular)
+                             .accessibilityLabel("Especie personaje")
                      }
                  }.frame( maxWidth: .infinity, maxHeight: .infinity)
 
@@ -55,7 +59,7 @@ struct CharacterRow: View {
                                   image:"https://rickandmortyapi.com/api/character/avatar/94.jpeg", origin: "tierra",
                                   location:"lugar",
                                   status: "live",
-                                  type: "tipo"))
+                                  type: "tipo")).previewLayout(.sizeThatFits)
      }
  }
 
